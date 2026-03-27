@@ -34,6 +34,18 @@ export default function HeroVideo({
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <style>{`
+        @keyframes editionSwing {
+          0%   { transform: scale(1)    rotate(0deg); }
+          25%  { transform: scale(1.28) rotate(-10deg); }
+          75%  { transform: scale(1.28) rotate(10deg); }
+          100% { transform: scale(1)    rotate(0deg); }
+        }
+        .edition-animate {
+          display: inline-block;
+          animation: editionSwing 1.2s ease-in-out 2s 1 both;
+        }
+      `}</style>
       {/* Video background */}
       <video
         ref={videoRef}
@@ -81,7 +93,7 @@ export default function HeroVideo({
 
         <h1 className="font-display text-white mb-4">
           <span className="block text-[var(--color-fuoco-light)] text-5xl md:text-7xl font-bold leading-none">
-            {edition}
+            <span className="edition-animate">{edition}</span>
           </span>
           <span className="block text-4xl md:text-6xl font-bold leading-tight mt-2">
             {title}
