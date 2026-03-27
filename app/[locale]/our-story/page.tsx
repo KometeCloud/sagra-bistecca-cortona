@@ -65,16 +65,10 @@ export default function OurStoryPage() {
       <section className="py-20 bg-[var(--color-crema)]">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-display text-3xl font-bold text-[var(--color-chianti)] mb-12">
-            Una storia lunga decenni
+            {t('timelineTitle')}
           </h2>
           <div className="space-y-6">
-            {[
-              { year: '1960', text: 'La prima edizione della sagra a Cortona' },
-              { year: '1980', text: 'La griglia cresce: nasce il simbolo della sagra' },
-              { year: '2000', text: 'La sagra supera i 10.000 visitatori per edizione' },
-              { year: '2025', text: '64ª edizione: un successo senza precedenti' },
-              { year: '2026', text: '65ª edizione — Ti aspettiamo!' },
-            ].map((item) => (
+            {(t.raw('timeline') as { year: string; text: string }[]).map((item) => (
               <div key={item.year} className="flex items-center gap-6 text-left">
                 <div className="shrink-0 w-16 text-right">
                   <span className="font-display text-2xl font-bold text-[var(--color-chianti)]">{item.year}</span>

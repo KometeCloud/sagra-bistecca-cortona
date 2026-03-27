@@ -84,7 +84,15 @@
     "statsEditions": "Editions",
     "statsYears": "Years of history",
     "statsGrill": "Meters of grill",
-    "statsCity": "Cortona"
+    "statsCity": "Cortona",
+    "timelineTitle": "A story spanning decades",
+    "timeline": [
+      { "year": "1960", "text": "The first edition of the festival in Cortona" },
+      { "year": "1980", "text": "The grill grows: the symbol of the festival is born" },
+      { "year": "2000", "text": "The festival surpasses 10,000 visitors per edition" },
+      { "year": "2025", "text": "64th edition: an unprecedented success" },
+      { "year": "2026", "text": "65th edition — We look forward to seeing you!" }
+    ]
   },
   "contacts": {
     "title": "Contacts",
