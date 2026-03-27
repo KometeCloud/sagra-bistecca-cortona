@@ -116,43 +116,12 @@
   },
   "stay": {
     "title": "Where to Stay",
-    "subtitle": "Accommodations with special deals for Sagra visitors",
-    "intro": "We have selected a number of accommodations in Cortona and surroundings that offer special conditions for festival visitors. Book directly with them and enjoy the magic of Cortona.",
-    "ticketInfo": "💡 Show your festival ticket at check-in to receive the special rate.",
-    "badge": "Partner",
-    "deal": "Special rate for Sagra della Bistecca visitors",
-    "book": "Book",
-    "ctaTitle": "Are you an accommodation?",
-    "ctaText": "Contact us to become a partner of the Sagra della Bistecca and offer special conditions to our visitors.",
-    "ctaButton": "Contact Us",
-    "accommodations": [
-      {
-        "name": "Hotel La Torricella",
-        "stars": 3,
-        "type": "Hotel",
-        "address": "Via Nazionale 12, Cortona (AR)",
-        "deal": "10% discount on your stay during the festival days",
-        "phone": "+39 0575 000001",
-        "website": "#"
-      },
-      {
-        "name": "B&B Il Poggio di Cortona",
-        "stars": 2,
-        "type": "B&B",
-        "address": "Loc. Poggio, Cortona (AR)",
-        "deal": "Breakfast included for all festival guests",
-        "phone": "+39 0575 000002",
-        "website": "#"
-      },
-      {
-        "name": "Agriturismo Valle della Chiana",
-        "stars": 0,
-        "type": "Agriturismo",
-        "address": "SS 71, Cortona (AR)",
-        "deal": "Special festival rate: from €80/night with dinner included",
-        "phone": "+39 0575 000003",
-        "website": "#"
-      }
-    ]
+    "subtitle": "Apartments in Cortona — ilcasale.com",
+    "intro": "Stay in the heart of Tuscany. We have curated a selection of apartments and villas in Cortona and surroundings, available on ilcasale.com. Book directly and enjoy the magic of Cortona.",
+    "badge": "ilcasale.com",
+    "book": "Discover →",
+    "ctaTitle": "Want to add your property?",
+    "ctaText": "Contact us to collaborate with the Sagra della Bistecca and offer special conditions to our visitors.",
+    "ctaButton": "Contact Us"
   }
 }

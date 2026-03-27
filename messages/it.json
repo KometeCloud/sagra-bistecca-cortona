@@ -116,43 +116,12 @@
   },
   "stay": {
     "title": "Dove Dormire",
-    "subtitle": "Strutture convenzionate con la Sagra della Bistecca",
-    "intro": "Abbiamo selezionato alcune strutture ricettive di Cortona e dintorni che offrono condizioni speciali ai visitatori della sagra. Prenota direttamente con loro e goditi la magia di Cortona.",
-    "ticketInfo": "💡 Mostra il tuo biglietto della sagra all'arrivo per ottenere la tariffa convenzionata.",
-    "badge": "Convenzionato",
-    "deal": "Tariffa speciale per i visitatori della Sagra della Bistecca",
-    "book": "Prenota",
-    "ctaTitle": "Sei una struttura ricettiva?",
-    "ctaText": "Contattaci per convenzionarti con la Sagra della Bistecca e offrire condizioni speciali ai nostri visitatori.",
-    "ctaButton": "Contattaci",
-    "accommodations": [
-      {
-        "name": "Hotel La Torricella",
-        "stars": 3,
-        "type": "Hotel",
-        "address": "Via Nazionale 12, Cortona (AR)",
-        "deal": "10% di sconto sul soggiorno durante i giorni della sagra",
-        "phone": "+39 0575 000001",
-        "website": "#"
-      },
-      {
-        "name": "B&B Il Poggio di Cortona",
-        "stars": 2,
-        "type": "B&B",
-        "address": "Loc. Poggio, Cortona (AR)",
-        "deal": "Colazione inclusa per tutti gli ospiti della sagra",
-        "phone": "+39 0575 000002",
-        "website": "#"
-      },
-      {
-        "name": "Agriturismo Valle della Chiana",
-        "stars": 0,
-        "type": "Agriturismo",
-        "address": "SS 71, Cortona (AR)",
-        "deal": "Tariffa speciale sagra: a partire da €80/notte con cena inclusa",
-        "phone": "+39 0575 000003",
-        "website": "#"
-      }
-    ]
+    "subtitle": "Appartamenti a Cortona — ilcasale.com",
+    "intro": "Soggiorna nel cuore della Toscana. Abbiamo selezionato una raccolta di appartamenti e ville a Cortona e dintorni, disponibili su ilcasale.com. Prenota direttamente e vivi la magia di Cortona.",
+    "badge": "ilcasale.com",
+    "book": "Scopri →",
+    "ctaTitle": "Vuoi aggiungere la tua struttura?",
+    "ctaText": "Contattaci per collaborare con la Sagra della Bistecca e offrire condizioni speciali ai nostri visitatori.",
+    "ctaButton": "Contattaci"
   }
 }
