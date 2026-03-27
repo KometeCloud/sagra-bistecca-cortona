@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
@@ -34,21 +35,30 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-tight">
-          <span
-            className={`font-display text-xl font-bold tracking-wide transition-colors ${
-              scrolled ? 'text-[var(--color-chianti)]' : 'text-white drop-shadow-md'
-            }`}
-          >
-            Sagra della Bistecca
-          </span>
-          <span
-            className={`text-xs tracking-widest uppercase transition-colors ${
-              scrolled ? 'text-[var(--color-fuoco)]' : 'text-[var(--color-crema)]'
-            }`}
-          >
-            Cortona · 65ª Edizione
-          </span>
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/immagini/loghi/LOGO-SAGRA-GENERICO.webp"
+            alt="Logo Sagra della Bistecca"
+            width={48}
+            height={48}
+            className="object-contain"
+          />
+          <div className="flex flex-col leading-tight">
+            <span
+              className={`font-display text-xl font-bold tracking-wide transition-colors ${
+                scrolled ? 'text-[var(--color-chianti)]' : 'text-white drop-shadow-md'
+              }`}
+            >
+              Sagra della Bistecca
+            </span>
+            <span
+              className={`text-xs tracking-widest uppercase transition-colors ${
+                scrolled ? 'text-[var(--color-fuoco)]' : 'text-[var(--color-crema)]'
+              }`}
+            >
+              Cortona · 65ª Edizione
+            </span>
+          </div>
         </Link>
 
         {/* Desktop links */}
