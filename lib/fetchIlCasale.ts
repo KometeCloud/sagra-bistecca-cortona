@@ -42,6 +42,11 @@ function parseClassList(classList: string[]): { adults: number; children: number
   return { adults, children };
 }
 
+// Correzioni manuali per titoli malformati nel CMS
+const NAME_OVERRIDES: Record<string, string> = {
+  'ilcasale.com/exclusive': 'CASALE Exclusive x34',
+};
+
 async function fetchFromSite(baseUrl: string, sourceName: string): Promise<Property[]> {
   try {
     const res = await fetch(
@@ -53,9 +58,13 @@ async function fetchFromSite(baseUrl: string, sourceName: string): Promise<Prope
     return items.map(
       (item: Record<string, unknown>): Property => {
         const { adults, children } = parseClassList((item.class_list as string[]) ?? []);
+        const domain = new URL(baseUrl).hostname;
+        const slug = item.slug as string;
+        const rawName = stripHtml((item.title as Record<string, string>)?.rendered ?? '');
+        const name = NAME_OVERRIDES[`${domain}/${slug}`] ?? rawName;
         return {
           id: item.id as number,
-          name: stripHtml((item.title as Record<string, string>)?.rendered ?? ''),
+          name,
           description: stripHtml((item.content as Record<string, string>)?.rendered ?? ''),
           image:
             (
