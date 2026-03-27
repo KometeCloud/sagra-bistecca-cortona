@@ -3,7 +3,9 @@
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/navigation';
 
-export default function LanguageSwitcher() {
+type Props = { scrolled?: boolean };
+
+export default function LanguageSwitcher({ scrolled = false }: Props) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -16,7 +18,11 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={toggle}
-      className="flex items-center gap-1 text-sm font-medium px-3 py-1 rounded-full border border-[var(--color-chianti)] text-[var(--color-chianti)] hover:bg-[var(--color-chianti)] hover:text-white transition-all duration-200"
+      className={`flex items-center gap-1 text-sm font-semibold px-3 py-2 rounded-full border transition-all duration-200 ${
+        scrolled
+          ? 'border-gray-400 text-gray-500 hover:bg-gray-100'
+          : 'border-gray-400 text-gray-300 hover:bg-white/10'
+      }`}
       aria-label="Cambia lingua / Switch language"
     >
       <span className={locale === 'it' ? 'font-bold' : 'opacity-60'}>IT</span>

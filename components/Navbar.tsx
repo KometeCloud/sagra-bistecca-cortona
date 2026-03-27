@@ -19,7 +19,6 @@ export default function Navbar() {
   const links = [
     { href: '/', label: t('home') },
     { href: '/menu', label: t('menu') },
-    { href: '/dove-dormire', label: t('whereToStay') },
     { href: '/our-story', label: t('ourStory') },
     { href: '/gallery', label: t('gallery') },
     { href: '/contacts', label: t('contacts') },
@@ -75,9 +74,15 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Right side: lang + CTA */}
+        {/* Right side: lang + dove dormire + CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <LanguageSwitcher />
+          <LanguageSwitcher scrolled={scrolled} />
+          <Link
+            href="/dove-dormire"
+            className="border-2 border-[var(--color-oro)] text-[var(--color-oro)] text-sm font-semibold px-4 py-2 rounded-full hover:bg-[var(--color-oro)] hover:text-white transition-colors"
+          >
+            {t('whereToStay')}
+          </Link>
           <Link
             href="/tickets"
             className="bg-[var(--color-chianti)] text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-[var(--color-chianti-light)] transition-colors"
@@ -116,8 +121,15 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
+            <Link
+              href="/dove-dormire"
+              className="border-2 border-[var(--color-oro)] text-[var(--color-oro)] font-semibold py-2 px-4 rounded-full text-sm text-center"
+              onClick={() => setOpen(false)}
+            >
+              {t('whereToStay')}
+            </Link>
             <div className="flex items-center gap-3 pt-2">
-              <LanguageSwitcher />
+              <LanguageSwitcher scrolled />
               <Link
                 href="/tickets"
                 className="bg-[var(--color-chianti)] text-white text-sm font-semibold px-4 py-2 rounded-full"
