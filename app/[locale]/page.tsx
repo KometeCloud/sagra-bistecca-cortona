@@ -11,7 +11,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background image */}
         <Image
-          src="/immagini/hero-test.jpg"
+          src="/immagini/hero-test.webp"
           alt="Sagra della Bistecca di Cortona"
           fill
           className="object-cover"
