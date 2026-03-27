@@ -39,7 +39,6 @@ export default async function DoveDormirePage() {
           <PropertyGrid
             properties={properties}
             bookLabel={t('book')}
-            badgeLabel={t('badge')}
           />
         </div>
       </section>

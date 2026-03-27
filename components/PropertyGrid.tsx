@@ -6,10 +6,9 @@ import type { Property } from '@/lib/fetchIlCasale';
 type Props = {
   properties: Property[];
   bookLabel: string;
-  badgeLabel: string;
 };
 
-export default function PropertyGrid({ properties, bookLabel, badgeLabel }: Props) {
+export default function PropertyGrid({ properties, bookLabel }: Props) {
   const sources = Array.from(new Set(properties.map((p) => p.source)));
   const [active, setActive] = useState<string | null>(null);
 
@@ -70,9 +69,7 @@ export default function PropertyGrid({ properties, bookLabel, badgeLabel }: Prop
               <span className="absolute top-3 left-3 bg-[var(--color-terra)] text-white text-xs font-bold px-2.5 py-1 rounded-full opacity-80">
                 {prop.source}
               </span>
-              <span className="absolute top-3 right-3 bg-[var(--color-chianti)] text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                {badgeLabel}
-              </span>
+
             </div>
 
             {/* Card body */}
