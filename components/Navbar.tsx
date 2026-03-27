@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import Image from 'next/image';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
@@ -36,12 +35,11 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/immagini/loghi/LOGO-SAGRA-GENERICO.webp"
             alt="Logo Sagra della Bistecca"
-            width={48}
-            height={48}
-            className="object-contain"
+            style={{ width: 48, height: 48, objectFit: 'contain' }}
           />
           <div className="flex flex-col leading-tight">
             <span
