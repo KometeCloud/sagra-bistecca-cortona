@@ -42,7 +42,7 @@ export default function HomePage() {
                 <div className="font-display text-6xl font-bold text-[var(--color-fuoco-light)]">750g</div>
                 <div className="text-[var(--color-crema)] mt-2 text-lg">Bistecca Chianina</div>
                 <div className="mt-6 pt-6 border-t border-white/20 text-sm text-[var(--color-crema-dark)] opacity-80">
-                  Cotta al raro · Solo sale grosso
+                  Cotta al sangue · Solo sale grosso
                 </div>
               </div>
               {/* Decorative element */}

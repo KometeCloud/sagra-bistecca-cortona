@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "65° Sagra della Bistecca - Cortona",
   description:
-    "La Sagra della Bistecca di Cortona: bistecca Chianina cotta al raro, la griglia più grande d'Italia. Giardini del Parterre, Cortona.",
+    "La Sagra della Bistecca di Cortona: bistecca Chianina cotta al sangue, la griglia più grande d'Italia. Giardini del Parterre, Cortona.",
   openGraph: {
     title: "65° Sagra della Bistecca - Cortona",
     description:
