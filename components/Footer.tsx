@@ -38,6 +38,7 @@ export default function Footer() {
                 { href: '/', label: nav('home') },
                 { href: '/menu', label: nav('menu') },
                 { href: '/tickets', label: nav('tickets') },
+                { href: '/dove-dormire', label: nav('whereToStay') },
                 { href: '/gallery', label: nav('gallery') },
                 { href: '/our-story', label: nav('ourStory') },
                 { href: '/contacts', label: nav('contacts') },

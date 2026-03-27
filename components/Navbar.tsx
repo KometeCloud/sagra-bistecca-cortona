@@ -19,6 +19,7 @@ export default function Navbar() {
   const links = [
     { href: '/', label: t('home') },
     { href: '/menu', label: t('menu') },
+    { href: '/dove-dormire', label: t('whereToStay') },
     { href: '/our-story', label: t('ourStory') },
     { href: '/gallery', label: t('gallery') },
     { href: '/contacts', label: t('contacts') },
