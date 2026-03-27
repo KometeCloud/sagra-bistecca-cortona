@@ -1,19 +1,15 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import { fetchProperty } from '@/lib/fetchProperty';
 
-type Accommodation = {
-  name: string;
-  stars: number;
-  type: string;
-  address: string;
-  deal: string;
-  phone: string;
-  website: string;
-};
+const PROPERTY_IDS = [22586, 21370, 22578];
 
-export default function DoveDormirePage() {
-  const t = useTranslations('stay');
-  const accommodations = t.raw('accommodations') as Accommodation[];
+export default async function DoveDormirePage() {
+  const t = await getTranslations('stay');
+
+  const properties = (
+    await Promise.all(PROPERTY_IDS.map((id) => fetchProperty(id)))
+  ).filter(Boolean);
 
   return (
     <>
@@ -44,74 +40,55 @@ export default function DoveDormirePage() {
         </div>
       </section>
 
-      {/* Accommodations grid */}
+      {/* Properties grid */}
       <section className="py-20 bg-[#FAF5EC]">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {accommodations.map((acc) => (
+            {properties.map((prop) => (
               <div
-                key={acc.name}
+                key={prop!.id}
                 className="bg-white rounded-3xl overflow-hidden shadow-sm border border-[var(--color-crema-dark)] hover:shadow-lg transition-shadow flex flex-col"
               >
-                {/* Card header */}
-                <div className="bg-gradient-to-br from-[var(--color-chianti)] to-[var(--color-terra)] p-6 text-white">
-                  <div className="flex items-start justify-between mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-[var(--color-crema)] opacity-70">
-                      {acc.type}
-                    </span>
-                    <span className="bg-[var(--color-fuoco)] text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                {/* Immagine */}
+                {prop!.image && (
+                  <div className="relative h-48 overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={prop!.image}
+                      alt={prop!.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <span className="absolute top-3 right-3 bg-[var(--color-fuoco)] text-white text-xs font-bold px-2.5 py-1 rounded-full">
                       {t('badge')}
                     </span>
                   </div>
-                  <h3 className="font-display text-xl font-bold mt-1">{acc.name}</h3>
-                  {acc.stars > 0 && (
-                    <div className="flex gap-0.5 mt-1">
-                      {Array.from({ length: acc.stars }).map((_, i) => (
-                        <span key={i} className="text-[var(--color-oro)] text-sm">★</span>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                )}
 
                 {/* Card body */}
-                <div className="p-6 flex flex-col flex-1 gap-4">
-                  {/* Address */}
-                  <div className="flex items-start gap-2 text-sm text-[var(--color-terra)] opacity-70">
-                    <svg className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-chianti)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    {acc.address}
-                  </div>
+                <div className="p-6 flex flex-col flex-1 gap-3">
+                  <h3 className="font-display text-xl font-bold text-[var(--color-chianti)]">
+                    {prop!.name}
+                  </h3>
 
-                  {/* Deal */}
+                  <p className="text-sm text-[var(--color-terra)] opacity-70 leading-relaxed flex-1">
+                    {prop!.description}
+                  </p>
+
+                  {/* Convenzione */}
                   <div className="bg-[var(--color-crema)] rounded-xl p-3 text-sm text-[var(--color-terra)] font-medium flex items-start gap-2">
                     <span className="text-[var(--color-fuoco)] shrink-0">🎟</span>
-                    {acc.deal}
+                    {t('deal')}
                   </div>
 
-                  {/* Phone */}
+                  {/* CTA */}
                   <a
-                    href={`tel:${acc.phone.replace(/\s/g, '')}`}
-                    className="flex items-center gap-2 text-sm text-[var(--color-terra)] opacity-70 hover:opacity-100 hover:text-[var(--color-chianti)] transition-colors"
+                    href={prop!.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full block text-center bg-[var(--color-chianti)] hover:bg-[var(--color-chianti-light)] text-white font-semibold py-3 rounded-xl transition-colors mt-auto"
                   >
-                    <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    {acc.phone}
+                    {t('book')} →
                   </a>
-
-                  {/* Book button */}
-                  <div className="mt-auto">
-                    <a
-                      href={acc.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full block text-center bg-[var(--color-chianti)] hover:bg-[var(--color-chianti-light)] text-white font-semibold py-3 rounded-xl transition-colors"
-                    >
-                      {t('book')} →
-                    </a>
-                  </div>
                 </div>
               </div>
             ))}
