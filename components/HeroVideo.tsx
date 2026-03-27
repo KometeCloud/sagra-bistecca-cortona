@@ -37,13 +37,13 @@ export default function HeroVideo({
       <style>{`
         @keyframes editionSwing {
           0%   { transform: scale(1)    rotate(0deg); }
-          25%  { transform: scale(1.28) rotate(-10deg); }
-          75%  { transform: scale(1.28) rotate(10deg); }
+          25%  { transform: scale(1.45) rotate(-12deg); }
+          75%  { transform: scale(1.45) rotate(12deg); }
           100% { transform: scale(1)    rotate(0deg); }
         }
         .edition-animate {
           display: inline-block;
-          animation: editionSwing 1.2s ease-in-out 2s 1 both;
+          animation: editionSwing 1.2s ease-in-out 2s 2 both;
         }
       `}</style>
       {/* Video background */}
