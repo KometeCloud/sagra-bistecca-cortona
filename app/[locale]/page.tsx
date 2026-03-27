@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import Image from 'next/image';
+import HeroVideo from '@/components/HeroVideo';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -8,81 +8,15 @@ export default function HomePage() {
   return (
     <>
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background image */}
-        <Image
-          src="/immagini/foto/hero-test.webp"
-          alt="Sagra della Bistecca di Cortona"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Dark overlay per leggibilità del testo */}
-        <div className="absolute inset-0 bg-black/55" />
-
-        {/* Flame pattern top */}
-        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[var(--color-chianti)] via-[var(--color-fuoco)] to-[var(--color-oro)]" />
-
-        {/* Content */}
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="mb-6">
-            <span className="inline-block text-[var(--color-fuoco-light)] text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-              ✦ Cortona · Toscana ✦
-            </span>
-          </div>
-
-          <h1 className="font-display text-white mb-4">
-            <span className="block text-[var(--color-fuoco-light)] text-5xl md:text-7xl font-bold leading-none">
-              {t('edition')}
-            </span>
-            <span className="block text-4xl md:text-6xl font-bold leading-tight mt-2">
-              {t('title')}
-            </span>
-          </h1>
-
-          <p className="text-[var(--color-crema)] text-xl md:text-2xl mt-4 mb-2 font-display italic">
-            {t('subtitle')}
-          </p>
-
-          <div className="flex items-center justify-center gap-3 mt-6 mb-10">
-            <div className="h-px w-16 bg-[var(--color-fuoco)] opacity-60" />
-            <span className="text-[var(--color-crema-dark)] text-lg font-semibold tracking-wide">
-              {t('dates')}
-            </span>
-            <div className="h-px w-16 bg-[var(--color-fuoco)] opacity-60" />
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/tickets"
-              className="bg-[var(--color-fuoco)] hover:bg-[var(--color-fuoco-light)] text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-[0_0_30px_rgba(232,98,26,0.5)] tracking-wide"
-            >
-              🎟 {t('cta')}
-            </Link>
-            <Link
-              href="/menu"
-              className="border-2 border-white/40 hover:border-white text-white font-semibold text-lg px-8 py-4 rounded-full transition-all duration-200 hover:bg-white/10"
-            >
-              {t('learnMore')}
-            </Link>
-          </div>
-
-          <p className="text-[var(--color-crema)] opacity-60 text-sm mt-8 flex items-center justify-center gap-2">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            {t('location')}
-          </p>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-      </section>
+      <HeroVideo
+        edition={t('edition')}
+        title={t('title')}
+        subtitle={t('subtitle')}
+        dates={t('dates')}
+        location={t('location')}
+        cta={t('cta')}
+        learnMore={t('learnMore')}
+      />
 
       {/* ─── ABOUT: LA BISTECCA ─── */}
       <section className="py-24 bg-[#FAF5EC]">
