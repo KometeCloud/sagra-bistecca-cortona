@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -8,17 +9,16 @@ export default function HomePage() {
     <>
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background gradient (placeholder until real image) */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#3D1A0A] via-[#6B1414] to-[#2C1A0A]" />
-
-        {/* Texture overlay */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, #E8621A33 0%, transparent 50%),
-                              radial-gradient(circle at 80% 20%, #8B1A1A44 0%, transparent 40%)`,
-          }}
+        {/* Background image */}
+        <Image
+          src="/immagini/hero-test.jpg"
+          alt="Sagra della Bistecca di Cortona"
+          fill
+          className="object-cover"
+          priority
         />
+        {/* Dark overlay per leggibilità del testo */}
+        <div className="absolute inset-0 bg-black/55" />
 
         {/* Flame pattern top */}
         <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[var(--color-chianti)] via-[var(--color-fuoco)] to-[var(--color-oro)]" />
