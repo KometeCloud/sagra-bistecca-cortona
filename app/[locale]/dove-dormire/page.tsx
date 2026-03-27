@@ -1,11 +1,11 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { fetchAllProperties } from '@/lib/fetchIlCasale';
 import PropertyGrid from '@/components/PropertyGrid';
 
 export default async function DoveDormirePage() {
-  const t = await getTranslations('stay');
-  const properties = await fetchAllProperties();
+  const [t, locale] = await Promise.all([getTranslations('stay'), getLocale()]);
+  const properties = await fetchAllProperties(locale);
 
   return (
     <>
