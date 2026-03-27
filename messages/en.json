@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "tickets": "Tickets",
+    "gallery": "Gallery",
+    "ourStory": "Our Story",
+    "contacts": "Contacts",
+    "buyTickets": "Buy Tickets"
+  },
+  "home": {
+    "edition": "65th",
+    "title": "Steak Festival",
+    "subtitle": "Cortona, Tuscany",
+    "dates": "Summer 2026",
+    "location": "Giardini del Parterre, Cortona",
+    "cta": "Buy Tickets",
+    "learnMore": "Learn more",
+    "aboutTitle": "The Chianina Steak",
+    "aboutText": "Chianina beef, cooked rare following the ancient Tuscan tradition, is the star of one of the most beloved food festivals in the Valdichiana. Every year, thousands of visitors gather to celebrate this unique gastronomic ritual.",
+    "grillTitle": "Italy's Largest Grill",
+    "grillText": "Over 14 meters long — the largest functioning grill in Italy. Every evening, our expert grillers cook hundreds of steaks to perfection, honoring tradition.",
+    "locationTitle": "Where to Find Us",
+    "locationText": "Giardini del Parterre, in the heart of Cortona. A unique atmosphere within the ancient Etruscan walls of the city.",
+    "historyTitle": "A Tradition Since the 1960s",
+    "historyText": "Founded in the 1960s, the Sagra della Bistecca di Cortona is one of Tuscany's longest-running and most beloved food festivals.",
+    "historyLink": "Discover our story"
+  },
+  "menu": {
+    "title": "The Menu",
+    "subtitle": "Simplicity and Tuscan tradition",
+    "steakTitle": "Steak Menu",
+    "steakPrice": "€35",
+    "steakDescription": "The star of the evening",
+    "steakItems": [
+      "Chianina Steak 750/800g",
+      "Side dish: white beans or tomatoes",
+      "1 liter of water",
+      "Bread and cover charge"
+    ],
+    "childrenTitle": "Children's Menu",
+    "childrenPrice": "€15",
+    "childrenDescription": "For our youngest guests",
+    "childrenItems": [
+      "Chianina Burger 140g",
+      "French fries",
+      "Soft drink or water",
+      "Cover charge"
+    ],
+    "groupsTitle": "Group Reservations",
+    "groupsText": "For groups of 10 or more people, table reservations are available. Contact us to plan your evening.",
+    "groupsNote": "Minimum 10 participants",
+    "gateInfo": "Tickets are also available at the gate on the evening of the event.",
+    "buyButton": "Buy now"
+  },
+  "tickets": {
+    "title": "Tickets",
+    "subtitle": "Buy online or at the gate",
+    "onlineTitle": "Buy Online",
+    "onlineText": "Purchase your tickets conveniently online through Tailor Tickets.",
+    "gateTitle": "At the Gate",
+    "gateText": "Tickets are also available at the gate on the evening of the event, subject to availability.",
+    "prices": "Prices",
+    "adult": "Adult Menu",
+    "children": "Children's Menu",
+    "comingSoon": "Ticket sales will open soon.",
+    "contactInfo": "For info: +39 0575 1596831"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "The magic of the festival",
+    "instagramTitle": "Follow Us on Instagram",
+    "instagramText": "Discover photos and videos from the event",
+    "instagramHandle": "@sagrabisteccacortona"
+  },
+  "ourStory": {
+    "title": "Our Story",
+    "subtitle": "Over 60 years of tradition",
+    "p1": "The Sagra della Bistecca di Cortona was born in the 1960s as a moment of celebration and community for the people of Cortona. What started as a simple communal dinner has grown over the decades into one of Tuscany's most renowned food festivals.",
+    "p2": "The undisputed star is always the same: Chianina beef, a prized cut from the native cattle breed of the Valdichiana, cooked rare following the traditional recipe. A simple preparation that respects the raw ingredient and enhances the authentic flavor of the meat.",
+    "p3": "The grill, over 14 meters long, is the festival's symbol — the largest functioning grill in Italy. Every evening of the event, the master grillers cook hundreds of steaks with the same care and passion as always.",
+    "p4": "After more than 60 editions, the Sagra della Bistecca remains an unmissable event for locals and visitors from around the world, set in the magnificent Giardini del Parterre, with the Valle di Cortona as a backdrop.",
+    "statsEditions": "Editions",
+    "statsYears": "Years of history",
+    "statsGrill": "Meters of grill",
+    "statsCity": "Cortona"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "subtitle": "We are here to help",
+    "phone": "Phone",
+    "phoneNumber": "+39 0575 1596831",
+    "phoneHours": "Mon-Fri, 8:00 AM - 6:00 PM",
+    "email": "Email",
+    "emailAddress": "info@sagradellabistecca.com",
+    "location": "Location",
+    "locationAddress": "Giardini del Parterre, Cortona (AR)",
+    "groupsTitle": "Group Reservation",
+    "groupsSubtitle": "For groups of 10 or more people",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "guests": "Number of guests",
+      "tickets": "Tickets already purchased online",
+      "message": "Additional notes",
+      "submit": "Send Request"
+    }
+  },
+  "footer": {
+    "tagline": "A Tuscan tradition since 1960",
+    "location": "Giardini del Parterre, Cortona (AR)",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved"
+  }
+}
