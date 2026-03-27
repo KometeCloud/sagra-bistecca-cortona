@@ -47,6 +47,11 @@ const NAME_OVERRIDES: Record<string, string> = {
   'ilcasale.com/exclusive': 'CASALE Exclusive x34',
 };
 
+// Rimuove suffissi tipo "Apartment Trilocale x4" / "Exclusive x34" dai titoli Il Casale
+function cleanIlCasaleName(name: string): string {
+  return name.replace(/\s+(?:Exclusive|Apartment)\s+.*$/i, '').trim();
+}
+
 // Traduzioni italiane statiche delle descrizioni (i siti sono solo in inglese)
 const DESCRIPTIONS_IT: Record<string, string> = {
   // ilcasale.com
@@ -117,7 +122,8 @@ async function fetchFromSite(
         const slug = item.slug as string;
         const key = `${domain}/${slug}`;
         const rawName = stripHtml((item.title as Record<string, string>)?.rendered ?? '');
-        const name = NAME_OVERRIDES[key] ?? rawName;
+        const overriddenName = NAME_OVERRIDES[key] ?? rawName;
+        const name = domain === 'ilcasale.com' ? cleanIlCasaleName(overriddenName) : overriddenName;
         const rawDescription = stripHtml(
           (item.content as Record<string, string>)?.rendered ?? ''
         );
