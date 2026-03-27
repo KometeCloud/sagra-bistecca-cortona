@@ -17,7 +17,6 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: '/', label: t('home') },
     { href: '/menu', label: t('menu') },
     { href: '/our-story', label: t('ourStory') },
     { href: '/gallery', label: t('gallery') },
