@@ -24,7 +24,7 @@ export async function fetchIlCasaleProperties(): Promise<IlCasaleProperty[]> {
     return items.map(
       (item: Record<string, unknown>): IlCasaleProperty => ({
         id: item.id as number,
-        name: (item.title as Record<string, string>)?.rendered ?? '',
+        name: stripHtml((item.title as Record<string, string>)?.rendered ?? ''),
         description: stripHtml((item.content as Record<string, string>)?.rendered ?? ''),
         image:
           (
