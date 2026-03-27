@@ -79,13 +79,13 @@ export default function Navbar() {
           <LanguageSwitcher scrolled={scrolled} />
           <Link
             href="/dove-dormire"
-            className="border-2 border-[var(--color-oro)] text-[var(--color-oro)] text-sm font-semibold px-4 py-2 rounded-full hover:bg-[var(--color-oro)] hover:text-white transition-colors"
+            className="border border-[var(--color-oro)] text-[var(--color-oro)] text-sm font-semibold px-4 py-2 rounded-full hover:bg-[var(--color-oro)] hover:text-white transition-colors"
           >
             {t('whereToStay')}
           </Link>
           <Link
             href="/tickets"
-            className="bg-[var(--color-chianti)] text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-[var(--color-chianti-light)] transition-colors"
+            className="bg-[var(--color-chianti)] text-white text-sm font-semibold px-4 py-2 rounded-full border border-white hover:bg-[var(--color-chianti-light)] transition-colors"
           >
             {t('buyTickets')}
           </Link>
@@ -123,7 +123,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/dove-dormire"
-              className="border-2 border-[var(--color-oro)] text-[var(--color-oro)] font-semibold py-2 px-4 rounded-full text-sm text-center"
+              className="border border-[var(--color-oro)] text-[var(--color-oro)] font-semibold py-2 px-4 rounded-full text-sm text-center"
               onClick={() => setOpen(false)}
             >
               {t('whereToStay')}
@@ -132,7 +132,7 @@ export default function Navbar() {
               <LanguageSwitcher scrolled />
               <Link
                 href="/tickets"
-                className="bg-[var(--color-chianti)] text-white text-sm font-semibold px-4 py-2 rounded-full"
+                className="bg-[var(--color-chianti)] text-white text-sm font-semibold px-4 py-2 rounded-full border border-white"
                 onClick={() => setOpen(false)}
               >
                 {t('buyTickets')}
