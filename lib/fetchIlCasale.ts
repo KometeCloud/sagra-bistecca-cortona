@@ -4,13 +4,12 @@ export type Property = {
   description: string;
   image: string;
   url: string;
-  bedrooms: number;
-  bathrooms: number;
-  capacity: number;
-  source: string; // nome struttura per il filtro
+  adults: number;
+  children: number;
+  source: string;
 };
 
-// Kept for backward compat (unused externally now)
+// Kept for backward compat
 export type IlCasaleProperty = Property;
 
 function decodeEntities(str: string): string {
@@ -31,6 +30,18 @@ function stripHtml(html: string, maxLen = 220): string {
     .slice(0, maxLen);
 }
 
+function parseClassList(classList: string[]): { adults: number; children: number } {
+  let adults = 0;
+  let children = 0;
+  for (const cls of classList) {
+    const a = cls.match(/^mphb-room-type-adults-(\d+)$/);
+    if (a) adults = parseInt(a[1], 10);
+    const c = cls.match(/^mphb-room-type-children-(\d+)$/);
+    if (c) children = parseInt(c[1], 10);
+  }
+  return { adults, children };
+}
+
 async function fetchFromSite(baseUrl: string, sourceName: string): Promise<Property[]> {
   try {
     const res = await fetch(
@@ -40,22 +51,24 @@ async function fetchFromSite(baseUrl: string, sourceName: string): Promise<Prope
     if (!res.ok) return [];
     const items = await res.json();
     return items.map(
-      (item: Record<string, unknown>): Property => ({
-        id: item.id as number,
-        name: stripHtml((item.title as Record<string, string>)?.rendered ?? ''),
-        description: stripHtml((item.content as Record<string, string>)?.rendered ?? ''),
-        image:
-          (
-            (item._embedded as Record<string, unknown>)?.[
-              'wp:featuredmedia'
-            ] as Array<Record<string, string>>
-          )?.[0]?.source_url ?? '',
-        url: (item.link as string) ?? '',
-        bedrooms: (item.bedrooms as number) ?? 0,
-        bathrooms: (item.bathrooms as number) ?? 0,
-        capacity: ((item.capacity as Record<string, number>)?.adults as number) ?? 0,
-        source: sourceName,
-      })
+      (item: Record<string, unknown>): Property => {
+        const { adults, children } = parseClassList((item.class_list as string[]) ?? []);
+        return {
+          id: item.id as number,
+          name: stripHtml((item.title as Record<string, string>)?.rendered ?? ''),
+          description: stripHtml((item.content as Record<string, string>)?.rendered ?? ''),
+          image:
+            (
+              (item._embedded as Record<string, unknown>)?.[
+                'wp:featuredmedia'
+              ] as Array<Record<string, string>>
+            )?.[0]?.source_url ?? '',
+          url: (item.link as string) ?? '',
+          adults,
+          children,
+          source: sourceName,
+        };
+      }
     );
   } catch {
     return [];
@@ -70,7 +83,6 @@ export async function fetchAllProperties(): Promise<Property[]> {
   return [...ilCasale, ...sanMichele];
 }
 
-// Backward compat
 export async function fetchIlCasaleProperties() {
   return fetchFromSite('https://ilcasale.com', 'Il Casale');
 }

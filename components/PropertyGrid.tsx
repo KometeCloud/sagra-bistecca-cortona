@@ -66,10 +66,19 @@ export default function PropertyGrid({ properties, bookLabel }: Props) {
                   🏡
                 </div>
               )}
+
+              {/* Badge struttura — sinistra */}
               <span className="absolute top-3 left-3 bg-[var(--color-terra)] text-white text-xs font-bold px-2.5 py-1 rounded-full opacity-80">
                 {prop.source}
               </span>
 
+              {/* Occupancy — destra */}
+              {prop.adults > 0 && (
+                <span className="absolute top-3 right-3 bg-black/50 text-white text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
+                  👥 {prop.adults}
+                  {prop.children > 0 && ` · 🧒 ${prop.children}`}
+                </span>
+              )}
             </div>
 
             {/* Card body */}
@@ -77,27 +86,6 @@ export default function PropertyGrid({ properties, bookLabel }: Props) {
               <h3 className="font-display text-xl font-bold text-[var(--color-chianti)]">
                 {prop.name}
               </h3>
-
-              {/* Pills */}
-              {(prop.bedrooms > 0 || prop.capacity > 0 || prop.bathrooms > 0) && (
-                <div className="flex flex-wrap gap-2 text-xs text-[var(--color-terra)] font-medium">
-                  {prop.bedrooms > 0 && (
-                    <span className="bg-[var(--color-crema)] px-2.5 py-1 rounded-full">
-                      🛏 {prop.bedrooms} {prop.bedrooms === 1 ? 'camera' : 'camere'}
-                    </span>
-                  )}
-                  {prop.capacity > 0 && (
-                    <span className="bg-[var(--color-crema)] px-2.5 py-1 rounded-full">
-                      👥 {prop.capacity} ospiti
-                    </span>
-                  )}
-                  {prop.bathrooms > 0 && (
-                    <span className="bg-[var(--color-crema)] px-2.5 py-1 rounded-full">
-                      🚿 {prop.bathrooms} {prop.bathrooms === 1 ? 'bagno' : 'bagni'}
-                    </span>
-                  )}
-                </div>
-              )}
 
               {prop.description && (
                 <p className="text-sm text-[var(--color-terra)] opacity-70 leading-relaxed flex-1">
