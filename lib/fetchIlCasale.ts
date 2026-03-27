@@ -151,12 +151,67 @@ async function fetchFromSite(
   }
 }
 
+// Villa Baldelli: REST API disabilitata — dati statici ricavati dalle pagine
+function getVillaBaldelli(locale: string): Property[] {
+  const it = locale === 'it';
+  return [
+    {
+      id: 1,
+      name: 'Camera Classica',
+      description: it
+        ? 'Al piano terra vicino alla Reception. Camera da letto, antibagno e bagno con doccia idromassaggio. Vista sul giardino e le colline di Cortona. 25 m², aria condizionata, Wi-Fi, minibar, cassaforte.'
+        : 'Ground floor near Reception. Bedroom, anteroom and bathroom with hydromassage shower. Garden and Cortona hillside views. 25 m², air conditioning, Wi-Fi, minibar, safe.',
+      image: 'https://villabaldelli.it/wp-content/uploads/2019/06/CLASSICHE-1-1170x775.jpg',
+      url: 'https://villabaldelli.it/index.php/accommodation/camera-classica/',
+      adults: 2,
+      children: 1,
+      source: 'Villa Baldelli',
+    },
+    {
+      id: 2,
+      name: 'Camera Superior',
+      description: it
+        ? 'Al piano terra o al primo piano. Camera da letto e bagno con doccia idromassaggio. Vista sul giardino e le colline di Cortona. 26 m², aria condizionata, Wi-Fi, minibar, cassaforte.'
+        : 'Ground or first floor. Bedroom and bathroom with hydromassage shower. Garden and Cortona hillside views. 26 m², air conditioning, Wi-Fi, minibar, safe.',
+      image: 'https://villabaldelli.it/wp-content/uploads/2019/06/SUPERIOR-3-1170x775.jpg',
+      url: 'https://villabaldelli.it/index.php/accommodation/camera-superior/',
+      adults: 2,
+      children: 0,
+      source: 'Villa Baldelli',
+    },
+    {
+      id: 3,
+      name: 'Camera Deluxe',
+      description: it
+        ? 'Al primo o secondo piano. Camera da letto e bagno con doccia idromassaggio. Vista sulla piscina. 29 m², aria condizionata, Wi-Fi, minibar, cassaforte.'
+        : 'First or second floor. Bedroom and bathroom with hydromassage shower. Pool view. 29 m², air conditioning, Wi-Fi, minibar, safe.',
+      image: 'https://villabaldelli.it/wp-content/uploads/2019/06/DELUXE-1-1170x782.jpg',
+      url: 'https://villabaldelli.it/index.php/accommodation/camera-delux/',
+      adults: 2,
+      children: 0,
+      source: 'Villa Baldelli',
+    },
+    {
+      id: 4,
+      name: 'Junior Suite',
+      description: it
+        ? 'Ai vari piani della villa. Camera da letto con area soggiorno e bagno con vasca idromassaggio. Vista su giardino, colline di Cortona e piscina. 35 m², alcune comunicanti con la Camera Deluxe.'
+        : 'Various floors. Bedroom with living area and whirlpool tub bathroom. Garden, hillside and pool views. 35 m², some units connecting with Deluxe Room.',
+      image: 'https://villabaldelli.it/wp-content/uploads/2019/06/J-SUITE-10-1170x775.jpg',
+      url: 'https://villabaldelli.it/index.php/accommodation/junior-suite/',
+      adults: 2,
+      children: 0,
+      source: 'Villa Baldelli',
+    },
+  ];
+}
+
 export async function fetchAllProperties(locale = 'it'): Promise<Property[]> {
   const [ilCasale, sanMichele] = await Promise.all([
     fetchFromSite('https://ilcasale.com', 'Il Casale', locale),
     fetchFromSite('https://hotelsanmichele.net', 'Hotel San Michele', locale),
   ]);
-  return [...ilCasale, ...sanMichele];
+  return [...ilCasale, ...sanMichele, ...getVillaBaldelli(locale)];
 }
 
 export async function fetchIlCasaleProperties(locale = 'it') {
