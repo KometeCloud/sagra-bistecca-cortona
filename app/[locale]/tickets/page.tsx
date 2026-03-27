@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import Script from 'next/script';
 
 export default function TicketsPage() {
   const t = useTranslations('tickets');
@@ -44,29 +45,43 @@ export default function TicketsPage() {
         </div>
       </section>
 
-      {/* Tailor Tickets embed area */}
+      {/* Tailor Tickets widget */}
       <section className="py-16 bg-[#FAF5EC]">
         <div className="max-w-3xl mx-auto px-4">
-          {/* Placeholder — sostituire con l'embed Tailor Tickets */}
-          <div className="bg-white rounded-3xl border-2 border-dashed border-[var(--color-crema-dark)] p-16 text-center shadow-sm">
-            <div className="text-6xl mb-4">🎟</div>
-            <h3 className="font-display text-2xl font-bold text-[var(--color-chianti)] mb-3">
-              {t('onlineTitle')}
-            </h3>
-            <p className="text-[var(--color-terra)] opacity-70 mb-6 max-w-md mx-auto">
-              {t('onlineText')}
-            </p>
-            <div className="inline-block bg-[var(--color-crema)] rounded-xl px-6 py-4 text-sm text-[var(--color-terra)] opacity-60 font-mono">
-              {/* Il widget Tailor Tickets verrà inserito qui */}
-              &lt;!-- Tailor Tickets embed --&gt;
+          <h3 className="font-display text-2xl font-bold text-[var(--color-chianti)] text-center mb-8">
+            {t('onlineTitle')}
+          </h3>
+          <div className="bg-white rounded-3xl shadow-sm border border-[var(--color-crema-dark)] p-6 overflow-hidden">
+            {/* Ticket Tailor Widget */}
+            <div className="tt-widget">
+              <div className="tt-widget-fallback">
+                <p>
+                  <a
+                    href="https://www.tickettailor.com/checkout/new-session/store/59501/chk/8cb6?ref=website_widget&show_search_filter=true&show_date_filter=true&show_sort=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--color-chianti)] underline font-semibold"
+                  >
+                    Clicca qui per acquistare i biglietti
+                  </a>
+                </p>
+              </div>
             </div>
-            <p className="text-[var(--color-chianti)] font-semibold text-sm mt-6">
-              {t('comingSoon')}
-            </p>
-            <p className="text-[var(--color-terra)] opacity-60 text-sm mt-2">
-              {t('contactInfo')}
-            </p>
+            <Script
+              src="https://cdn.tickettailor.com/js/widgets/min/widget.js"
+              data-url="https://www.tickettailor.com/checkout/new-session/store/59501/chk/8cb6?ref=website_widget&show_search_filter=true&show_date_filter=true&show_sort=true"
+              data-type="inline"
+              data-inline-minimal="true"
+              data-inline-show-logo="false"
+              data-inline-bg-fill="false"
+              data-inline-inherit-ref-from-url-param=""
+              data-inline-ref="website_widget"
+              strategy="lazyOnload"
+            />
           </div>
+          <p className="text-[var(--color-terra)] opacity-60 text-sm text-center mt-4">
+            {t('contactInfo')}
+          </p>
         </div>
       </section>
 
