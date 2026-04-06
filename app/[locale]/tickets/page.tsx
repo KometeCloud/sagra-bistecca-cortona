@@ -113,24 +113,23 @@ export default function TicketsPage() {
             {t('onlineTitle')}
           </h3>
           <div className="bg-white rounded-3xl shadow-sm border border-[var(--color-crema-dark)] p-6 overflow-hidden">
-            {/* Ticket Tailor Widget */}
             <div className="tt-widget">
               <div className="tt-widget-fallback">
                 <p>
                   <a
-                    href="https://www.tickettailor.com/checkout/new-session/store/59501/chk/8cb6?ref=website_widget&show_search_filter=true&show_date_filter=true&show_sort=true"
+                    href="https://www.tickettailor.com/checkout/new-session/id/7970903/chk/d2b6/?ref=website_widget&show_search_filter=true&show_date_filter=true&show_sort=true"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[var(--color-chianti)] underline font-semibold"
                   >
-                    Clicca qui per acquistare i biglietti
+                    Click here to buy tickets
                   </a>
                 </p>
               </div>
             </div>
             <Script
               src="https://cdn.tickettailor.com/js/widgets/min/widget.js"
-              data-url="https://www.tickettailor.com/checkout/new-session/store/59501/chk/8cb6?ref=website_widget&show_search_filter=true&show_date_filter=true&show_sort=true"
+              data-url="https://www.tickettailor.com/checkout/new-session/id/7970903/chk/d2b6/?ref=website_widget&show_search_filter=true&show_date_filter=true&show_sort=true"
               data-type="inline"
               data-inline-minimal="true"
               data-inline-show-logo="false"
