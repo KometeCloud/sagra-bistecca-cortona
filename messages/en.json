@@ -114,11 +114,26 @@
     "statsCity": "Cortona",
     "timelineTitle": "A story spanning decades",
     "timeline": [
-      { "year": "1960", "text": "The first edition of the festival in Cortona" },
-      { "year": "1980", "text": "The grill grows: the symbol of the festival is born" },
-      { "year": "2000", "text": "The festival surpasses 10,000 visitors per edition" },
-      { "year": "2025", "text": "64th edition: an unprecedented success" },
-      { "year": "2026", "text": "65th edition — We look forward to seeing you!" }
+      {
+        "year": "1960",
+        "text": "The first edition of the festival in Cortona"
+      },
+      {
+        "year": "1980",
+        "text": "The grill grows: the symbol of the festival is born"
+      },
+      {
+        "year": "2000",
+        "text": "The festival surpasses 10,000 visitors per edition"
+      },
+      {
+        "year": "2025",
+        "text": "64th edition: an unprecedented success"
+      },
+      {
+        "year": "2026",
+        "text": "65th edition — We look forward to seeing you!"
+      }
     ]
   },
   "contacts": {
@@ -148,7 +163,8 @@
       "yes": "Yes",
       "no": "No",
       "guestsPlaceholder": "Select"
-    }
+    },
+    "groupsNote": "For couples or groups of fewer than 10 people, no reservation is needed: there are plenty of tables where you can sit and enjoy your meal."
   },
   "footer": {
     "tagline": "A Tuscan tradition since 1960",
