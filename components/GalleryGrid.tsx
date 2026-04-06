@@ -28,6 +28,9 @@ const PHOTOS = [
   { src: '/immagini/foto/foto_1200x800/webp/persone_4.webp', alt: 'Ospiti alla sagra 2' },
   { src: '/immagini/foto/foto_1200x800/webp/pesone_1.webp', alt: 'Persone alla sagra' },
   { src: '/immagini/foto/foto_1200x800/webp/bar_1.webp', alt: 'Il bar della sagra' },
+  { src: '/immagini/foto/foto_1200x800/webp/bistecca_1.webp', alt: 'Bistecca Chianina' },
+  { src: '/immagini/foto/foto_1200x800/webp/burgher_1.webp', alt: 'Hamburger Chianina' },
+  { src: '/immagini/foto/foto_1200x800/webp/dolci_1.webp', alt: 'Dolci della sagra' },
 ];
 
 export default function GalleryGrid() {
