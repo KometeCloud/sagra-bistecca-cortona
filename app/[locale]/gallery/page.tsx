@@ -10,7 +10,7 @@ export default function GalleryPage() {
       <section className="pt-32 pb-16 bg-gradient-to-b from-[var(--color-chianti)] to-[var(--color-terra)] text-white text-center">
         <div className="max-w-3xl mx-auto px-4">
           <span className="text-[var(--color-fuoco-light)] text-sm font-semibold uppercase tracking-widest">
-            ✦ Foto e video
+            {t('photoBadge')}
           </span>
           <h1 className="font-display text-5xl md:text-6xl font-bold mt-3 mb-4">
             {t('title')}

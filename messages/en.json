@@ -72,6 +72,8 @@
       "Soft drink or water",
       "Cover charge"
     ],
+    "kitchenBadge": "✦ The festival kitchen",
+    "groupsBadge": "✦ Groups 10+ people",
     "groupsTitle": "Group Reservations",
     "groupsText": "For groups of 10 or more people, table reservations are available. Contact us to plan your evening.",
     "groupsNote": "Minimum 10 participants",
@@ -94,6 +96,7 @@
   "gallery": {
     "title": "Gallery",
     "subtitle": "The magic of the festival",
+    "photoBadge": "✦ Photos & videos",
     "instagramTitle": "Follow Us on Instagram",
     "instagramText": "Discover photos and videos from the event",
     "instagramHandle": "@sagrabisteccacortona"
@@ -128,6 +131,7 @@
     "emailAddress": "info@sagradellabistecca.com",
     "location": "Location",
     "locationAddress": "Giardini del Parterre, Cortona (AR)",
+    "groupsBadge": "✦ Groups 10+ people",
     "groupsTitle": "Group Reservation",
     "groupsSubtitle": "For groups of 10 or more people",
     "form": {

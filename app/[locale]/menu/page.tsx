@@ -14,7 +14,7 @@ export default function MenuPage() {
       <section className="pt-32 pb-16 bg-gradient-to-b from-[var(--color-chianti)] to-[var(--color-terra)] text-white text-center">
         <div className="max-w-3xl mx-auto px-4">
           <span className="text-[var(--color-fuoco-light)] text-sm font-semibold uppercase tracking-widest">
-            ✦ La cucina della sagra
+            {t('kitchenBadge')}
           </span>
           <h1 className="font-display text-5xl md:text-6xl font-bold mt-3 mb-4">
             {t('title')}
@@ -99,7 +99,7 @@ export default function MenuPage() {
       <section className="py-20 bg-[var(--color-crema)]">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <span className="text-[var(--color-fuoco)] text-sm font-semibold uppercase tracking-widest">
-            ✦ Gruppi
+            {t('groupsBadge')}
           </span>
           <h2 className="font-display text-3xl font-bold text-[var(--color-chianti)] mt-3 mb-4">
             {t('groupsTitle')}

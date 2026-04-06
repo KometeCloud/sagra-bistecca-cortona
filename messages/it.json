@@ -72,6 +72,8 @@
       "Bibita analcolica o acqua",
       "Coperto"
     ],
+    "kitchenBadge": "✦ La cucina della sagra",
+    "groupsBadge": "✦ Gruppi 10+ persone",
     "groupsTitle": "Prenotazioni Gruppi",
     "groupsText": "Per gruppi di 10 o più persone è possibile prenotare un tavolo. Contattaci per organizzare la tua serata.",
     "groupsNote": "Minimo 10 partecipanti",
@@ -94,6 +96,7 @@
   "gallery": {
     "title": "Galleria",
     "subtitle": "Le emozioni della sagra",
+    "photoBadge": "✦ Foto e video",
     "instagramTitle": "Seguici su Instagram",
     "instagramText": "Scopri le foto e i video dell'evento",
     "instagramHandle": "@sagrabisteccacortona"
@@ -128,6 +131,7 @@
     "emailAddress": "info@sagradellabistecca.com",
     "location": "Location",
     "locationAddress": "Giardini del Parterre, Cortona (AR)",
+    "groupsBadge": "✦ Gruppi 10+ persone",
     "groupsTitle": "Prenotazione Gruppi",
     "groupsSubtitle": "Per gruppi di 10 o più persone",
     "form": {

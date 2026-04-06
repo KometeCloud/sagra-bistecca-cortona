@@ -74,7 +74,7 @@ export default function ContactsPage() {
         <div className="max-w-2xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="text-[var(--color-fuoco)] text-sm font-semibold uppercase tracking-widest">
-              ✦ Gruppi 10+ persone
+              {t('groupsBadge')}
             </span>
             <h2 className="font-display text-3xl font-bold text-[var(--color-chianti)] mt-3 mb-2">
               {t('groupsTitle')}
