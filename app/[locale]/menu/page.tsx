@@ -117,7 +117,7 @@ export default function MenuPage() {
           <h2 className="font-display text-3xl font-bold text-[var(--color-chianti)] mt-3 mb-4">
             {t('groupsTitle')}
           </h2>
-          <p className="text-[var(--color-terra)] opacity-80 mb-2">{t('groupsText')}</p>
+          <p className="text-[var(--color-terra)] opacity-80 mb-2 whitespace-pre-line">{t('groupsText')}</p>
           <p className="text-[var(--color-chianti)] font-semibold text-sm">
             ⚠ {t('groupsNote')}
           </p>
