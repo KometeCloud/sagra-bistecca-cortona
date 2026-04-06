@@ -5,6 +5,7 @@ import HeroVideo from '@/components/HeroVideo';
 
 export default function HomePage() {
   const t = useTranslations('home');
+  const tMenu = useTranslations('menu');
 
   return (
     <>
@@ -126,29 +127,48 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
               {
-                icon: '🥩',
+                photo: '/immagini/foto/foto_1200x800/webp/bistecca_1.webp',
+                alt: 'Bistecca Chianina',
                 name: t('steakMenuName'),
-                price: '€35',
+                desc: tMenu('steakDescription'),
+                price: tMenu('steakPrice'),
                 items: [t('steakMenuItem1'), t('steakMenuItem2'), t('steakMenuItem3')],
               },
               {
-                icon: '🍔',
+                photo: '/immagini/foto/foto_1200x800/webp/burgher_1.webp',
+                alt: 'Hamburger Chianina',
                 name: t('childrenMenuName'),
-                price: '€15',
+                desc: tMenu('childrenDescription'),
+                price: tMenu('childrenPrice'),
                 items: [t('childrenMenuItem1'), t('childrenMenuItem2'), t('childrenMenuItem3')],
               },
             ].map((m) => (
-              <div key={m.name} className="bg-white rounded-2xl p-8 shadow-sm border border-[var(--color-crema-dark)] hover:shadow-md transition-shadow">
-                <div className="text-5xl mb-4">{m.icon}</div>
-                <h3 className="font-display text-2xl font-bold text-[var(--color-terra)] mb-1">{m.name}</h3>
-                <div className="text-3xl font-bold text-[var(--color-chianti)] mb-4">{m.price}</div>
-                <ul className="text-sm text-[var(--color-terra)] opacity-70 space-y-1">
-                  {m.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                      <span className="text-[var(--color-fuoco)]">✓</span> {item}
-                    </li>
-                  ))}
-                </ul>
+              <div key={m.name} className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[var(--color-crema-dark)] hover:shadow-xl transition-shadow">
+                <div className="relative h-72 overflow-hidden">
+                  <Image
+                    src={m.photo}
+                    alt={m.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-0 inset-x-0 p-6 text-white text-center">
+                    <h3 className="font-display text-3xl font-bold">{m.name}</h3>
+                    <p className="text-[var(--color-crema)] opacity-80 mt-1 text-sm">{m.desc}</p>
+                    <div className="text-5xl font-bold text-[var(--color-fuoco-light)] mt-2">{m.price}</div>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <ul className="space-y-3">
+                    {m.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="text-[var(--color-fuoco)] text-lg mt-0.5">✓</span>
+                        <span className="text-[var(--color-terra)] font-medium">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
