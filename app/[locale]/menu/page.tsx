@@ -1,6 +1,19 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isIt = locale === 'it';
+  return {
+    title: isIt ? 'Il Menu — Bistecca Chianina €39' : 'The Menu — Chianina Steak €39',
+    description: isIt
+      ? 'Menu bistecca Chianina 750/800g a €39, menu bambini a €18. Prenotazioni gruppi disponibili.'
+      : 'Chianina steak menu 750/800g at €39, children\'s menu at €18. Group bookings available.',
+    alternates: { canonical: `https://sagradellabistecca.com/${locale}/menu` },
+  };
+}
 
 export default function MenuPage() {
   const t = useTranslations('menu');

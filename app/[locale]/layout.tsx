@@ -3,9 +3,34 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import type { Metadata } from 'next';
+
+const BASE_URL = 'https://sagradellabistecca.com';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    alternates: {
+      canonical: `${BASE_URL}/${locale}`,
+      languages: {
+        it: `${BASE_URL}/it`,
+        en: `${BASE_URL}/en`,
+      },
+    },
+    openGraph: {
+      locale: locale === 'it' ? 'it_IT' : 'en_US',
+      alternateLocale: locale === 'it' ? 'en_US' : 'it_IT',
+    },
+  };
 }
 
 export default async function LocaleLayout({
@@ -22,8 +47,44 @@ export default async function LocaleLayout({
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: locale === 'it' ? '65° Sagra della Bistecca di Cortona' : '65th Sagra della Bistecca di Cortona',
+    description: locale === 'it'
+      ? 'La Sagra della Bistecca di Cortona: bistecca Chianina cotta al sangue, la griglia più grande d\'Italia.'
+      : 'The Sagra della Bistecca di Cortona: Chianina beef cooked rare, Italy\'s largest grill.',
+    startDate: '2026-08-11',
+    endDate: '2026-08-15',
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    location: {
+      '@type': 'Place',
+      name: 'Giardini del Parterre',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Giardini del Parterre',
+        addressLocality: 'Cortona',
+        addressRegion: 'AR',
+        postalCode: '52044',
+        addressCountry: 'IT',
+      },
+    },
+    organizer: {
+      '@type': 'Organization',
+      name: 'Sagra della Bistecca di Cortona',
+      url: 'https://sagradellabistecca.com',
+    },
+    image: 'https://sagradellabistecca.com/immagini/foto/foto_1200x800/webp/bistecca_1.webp',
+    url: 'https://sagradellabistecca.com',
+  };
+
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="min-h-screen">{children}</main>
       <Footer />

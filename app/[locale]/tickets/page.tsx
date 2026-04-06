@@ -1,6 +1,19 @@
 import { useTranslations } from 'next-intl';
 import Script from 'next/script';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isIt = locale === 'it';
+  return {
+    title: isIt ? 'Biglietti — Acquista Online' : 'Tickets — Buy Online',
+    description: isIt
+      ? 'Acquista i biglietti per la 65° Sagra della Bistecca di Cortona. 11-15 Agosto 2026. Menu bistecca €39, menu bambini €18.'
+      : 'Buy tickets for the 65th Sagra della Bistecca di Cortona. 11-15 August 2026. Steak menu €39, children\'s menu €18.',
+    alternates: { canonical: `https://sagradellabistecca.com/${locale}/tickets` },
+  };
+}
 
 export default function TicketsPage() {
   const t = useTranslations('tickets');

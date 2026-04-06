@@ -1,5 +1,18 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isIt = locale === 'it';
+  return {
+    title: isIt ? 'La Nostra Storia — Dal 1960' : 'Our Story — Since 1960',
+    description: isIt
+      ? 'La storia della Sagra della Bistecca di Cortona, nata negli anni \'60. Oltre 65 edizioni di tradizione toscana e bistecca Chianina.'
+      : 'The history of the Sagra della Bistecca di Cortona, founded in the 1960s. Over 65 editions of Tuscan tradition and Chianina steak.',
+    alternates: { canonical: `https://sagradellabistecca.com/${locale}/our-story` },
+  };
+}
 
 export default function OurStoryPage() {
   const t = useTranslations('ourStory');

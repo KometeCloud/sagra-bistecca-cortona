@@ -2,6 +2,19 @@ import { getTranslations, getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { fetchAllProperties } from '@/lib/fetchIlCasale';
 import PropertyGrid from '@/components/PropertyGrid';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isIt = locale === 'it';
+  return {
+    title: isIt ? 'Dove Dormire — Appartamenti e Hotel a Cortona' : 'Where to Stay — Apartments & Hotels in Cortona',
+    description: isIt
+      ? 'Appartamenti, ville e camere d\'albergo a Cortona e dintorni. Soggiorna vicino alla Sagra della Bistecca 2026.'
+      : 'Apartments, villas and hotel rooms in Cortona and surroundings. Stay near the Sagra della Bistecca 2026.',
+    alternates: { canonical: `https://sagradellabistecca.com/${locale}/dove-dormire` },
+  };
+}
 
 export default async function DoveDormirePage() {
   const [t, locale] = await Promise.all([getTranslations('stay'), getLocale()]);

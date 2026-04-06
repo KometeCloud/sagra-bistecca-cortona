@@ -1,5 +1,18 @@
 import { useTranslations } from 'next-intl';
 import GalleryGrid from '@/components/GalleryGrid';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isIt = locale === 'it';
+  return {
+    title: isIt ? 'Galleria Foto e Video' : 'Photo & Video Gallery',
+    description: isIt
+      ? 'Foto e video della Sagra della Bistecca di Cortona. Scopri le immagini della griglia, della bistecca Chianina e dell\'atmosfera della sagra.'
+      : 'Photos and videos from the Sagra della Bistecca di Cortona. Discover images of the grill, Chianina steak and the festival atmosphere.',
+    alternates: { canonical: `https://sagradellabistecca.com/${locale}/gallery` },
+  };
+}
 
 export default function GalleryPage() {
   const t = useTranslations('gallery');

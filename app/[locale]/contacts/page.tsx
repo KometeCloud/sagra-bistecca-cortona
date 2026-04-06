@@ -1,4 +1,17 @@
 import { useTranslations } from 'next-intl';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isIt = locale === 'it';
+  return {
+    title: isIt ? 'Contatti — Informazioni e Prenotazioni Gruppi' : 'Contacts — Info & Group Bookings',
+    description: isIt
+      ? 'Contatta la Sagra della Bistecca di Cortona. Prenotazioni gruppi, informazioni sull\'evento, telefono ed email.'
+      : 'Contact the Sagra della Bistecca di Cortona. Group bookings, event information, phone and email.',
+    alternates: { canonical: `https://sagradellabistecca.com/${locale}/contacts` },
+  };
+}
 
 export default function ContactsPage() {
   const t = useTranslations('contacts');
