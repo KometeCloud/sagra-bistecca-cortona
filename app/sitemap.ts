@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://sagradellabistecca.com';
 const locales = ['it', 'en'];
-const pages = ['', '/menu', '/tickets', '/gallery', '/our-story', '/contacts', '/dove-dormire'];
+const pages = ['', '/menu', '/tickets', '/gallery', '/our-story', '/contacts', '/dove-dormire', '/privacy'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];

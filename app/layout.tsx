@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
-import Script from "next/script";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -83,18 +82,6 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body className={`${playfair.variable} ${inter.variable}`}>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-C83KV73JHP"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-C83KV73JHP');
-          `}
-        </Script>
         {children}
         <SpeedInsights />
         <Analytics />

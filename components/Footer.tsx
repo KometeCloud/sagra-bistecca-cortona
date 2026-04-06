@@ -93,8 +93,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 text-center text-xs opacity-40">
-          © {new Date().getFullYear()} Sagra della Bistecca di Cortona · {t('rights')}
+        <div className="mt-10 pt-6 border-t border-white/10 text-center text-xs opacity-40 flex flex-col sm:flex-row items-center justify-center gap-2">
+          <span>© {new Date().getFullYear()} Sagra della Bistecca di Cortona · {t('rights')}</span>
+          <span className="hidden sm:inline">·</span>
+          <Link href="/privacy" className="hover:opacity-70 transition-opacity">Privacy Policy</Link>
         </div>
       </div>
     </footer>

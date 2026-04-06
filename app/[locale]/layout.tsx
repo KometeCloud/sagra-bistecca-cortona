@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CookieConsent from '@/components/CookieConsent';
 import type { Metadata } from 'next';
 
 const BASE_URL = 'https://sagradellabistecca.com';
@@ -88,6 +89,14 @@ export default async function LocaleLayout({
       <Navbar />
       <main className="min-h-screen">{children}</main>
       <Footer />
+      <CookieConsent
+        acceptLabel={locale === 'it' ? 'Accetta tutto' : 'Accept all'}
+        rejectLabel={locale === 'it' ? 'Solo necessari' : 'Necessary only'}
+        message={locale === 'it'
+          ? 'Utilizziamo cookie analitici (Google Analytics) per migliorare il sito. Puoi accettare o rifiutare.'
+          : 'We use analytics cookies (Google Analytics) to improve the site. You can accept or decline.'}
+        privacyLabel={locale === 'it' ? 'Privacy Policy' : 'Privacy Policy'}
+      />
     </NextIntlClientProvider>
   );
 }
