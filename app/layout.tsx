@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/immagini/loghi/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "65° Sagra della Bistecca - Cortona 2026",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "65° Sagra della Bistecca - Cortona 2026",
     description: "La sagra toscana più amata. 11-15 Agosto 2026, Cortona.",
-    images: ["/immagini/loghi/og-image.jpg"],
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://sagradellabistecca.com",
