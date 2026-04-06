@@ -43,7 +43,7 @@ export default function OurStoryPage() {
       </section>
 
       {/* Foto grid 1 — dopo le stats */}
-      <section className="py-12 bg-[#FAF5EC]">
+      <section className="pt-12 pb-0 bg-[#FAF5EC]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[

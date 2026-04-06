@@ -1,8 +1,12 @@
 import { useTranslations } from 'next-intl';
 import Script from 'next/script';
+import Image from 'next/image';
 
 export default function TicketsPage() {
   const t = useTranslations('tickets');
+  const tMenu = useTranslations('menu');
+  const steakItems = tMenu.raw('steakItems') as string[];
+  const childrenItems = tMenu.raw('childrenItems') as string[];
 
   return (
     <>
@@ -22,25 +26,69 @@ export default function TicketsPage() {
       </section>
 
       {/* Prices summary */}
-      <section className="py-16 bg-[var(--color-crema)]">
-        <div className="max-w-2xl mx-auto px-4">
+      <section className="py-16 bg-[#FAF5EC]">
+        <div className="max-w-5xl mx-auto px-4">
           <h2 className="font-display text-2xl font-bold text-[var(--color-chianti)] text-center mb-8">
             {t('prices')}
           </h2>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { icon: '🥩', label: t('adult'), price: '€35' },
-              { icon: '🍔', label: t('children'), price: '€15' },
-            ].map((p) => (
-              <div
-                key={p.label}
-                className="bg-white rounded-2xl p-6 text-center shadow-sm border border-[var(--color-crema-dark)]"
-              >
-                <div className="text-4xl mb-2">{p.icon}</div>
-                <div className="text-sm font-medium text-[var(--color-terra)] opacity-70 mb-1">{p.label}</div>
-                <div className="font-display text-3xl font-bold text-[var(--color-chianti)]">{p.price}</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Steak */}
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[var(--color-crema-dark)] hover:shadow-xl transition-shadow">
+              <div className="relative h-72 overflow-hidden">
+                <Image
+                  src="/immagini/foto/foto_1200x800/webp/bistecca_1.webp"
+                  alt="Bistecca Chianina"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white text-center">
+                  <h2 className="font-display text-3xl font-bold">{tMenu('steakTitle')}</h2>
+                  <p className="text-[var(--color-crema)] opacity-80 mt-1 text-sm">{tMenu('steakDescription')}</p>
+                  <div className="text-5xl font-bold text-[var(--color-fuoco-light)] mt-2">{tMenu('steakPrice')}</div>
+                </div>
               </div>
-            ))}
+              <div className="p-8">
+                <ul className="space-y-3">
+                  {steakItems.map((item: string) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-[var(--color-fuoco)] text-lg mt-0.5">✓</span>
+                      <span className="text-[var(--color-terra)] font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Children */}
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[var(--color-crema-dark)] hover:shadow-xl transition-shadow">
+              <div className="relative h-72 overflow-hidden">
+                <Image
+                  src="/immagini/foto/foto_1200x800/webp/burgher_1.webp"
+                  alt="Hamburger Chianina"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white text-center">
+                  <h2 className="font-display text-3xl font-bold">{tMenu('childrenTitle')}</h2>
+                  <p className="text-[var(--color-crema)] opacity-80 mt-1 text-sm">{tMenu('childrenDescription')}</p>
+                  <div className="text-5xl font-bold text-[var(--color-crema)] mt-2">{tMenu('childrenPrice')}</div>
+                </div>
+              </div>
+              <div className="p-8">
+                <ul className="space-y-3">
+                  {childrenItems.map((item: string) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-[var(--color-salvia)] text-lg mt-0.5">✓</span>
+                      <span className="text-[var(--color-terra)] font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
