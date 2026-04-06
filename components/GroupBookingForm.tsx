@@ -27,9 +27,11 @@ const inputClass = 'w-full border border-[var(--color-crema-dark)] rounded-xl px
 export default function GroupBookingForm({ labels }: Props) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [ticketsBought, setTicketsBought] = useState<'yes' | 'no' | null>(null);
+  const [ticketsError, setTicketsError] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (ticketsBought === null) { setTicketsError(true); return; }
     setStatus('sending');
 
     const formData = new FormData(e.currentTarget);
@@ -86,7 +88,7 @@ export default function GroupBookingForm({ labels }: Props) {
           <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
             {labels.phone}
           </label>
-          <input type="tel" name="phone" className={inputClass} />
+          <input type="tel" name="phone" required className={inputClass} />
         </div>
         <div>
           <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
@@ -112,7 +114,7 @@ export default function GroupBookingForm({ labels }: Props) {
             <button
               key={val}
               type="button"
-              onClick={() => setTicketsBought(val)}
+              onClick={() => { setTicketsBought(val); setTicketsError(false); }}
               className={`flex-1 py-3 rounded-xl font-semibold border transition-colors text-sm ${
                 ticketsBought === val
                   ? 'bg-[var(--color-chianti)] text-white border-[var(--color-chianti)]'
@@ -123,6 +125,9 @@ export default function GroupBookingForm({ labels }: Props) {
             </button>
           ))}
         </div>
+        {ticketsError && (
+          <p className="text-red-600 text-xs mt-1.5">Campo obbligatorio</p>
+        )}
       </div>
 
       <div>
