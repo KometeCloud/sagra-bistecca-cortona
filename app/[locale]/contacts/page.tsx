@@ -94,7 +94,7 @@ export default function ContactsPage() {
               {t('groupsTitle')}
             </h2>
             <p className="text-[var(--color-terra)] opacity-70">{t('groupsSubtitle')}</p>
-            <p className="text-[var(--color-terra)] opacity-60 text-sm mt-3">{t('groupsNote')}</p>
+            <p className="text-[var(--color-terra)] opacity-60 text-sm mt-3 whitespace-pre-line">{t('groupsNote')}</p>
           </div>
 
           <GroupBookingForm
