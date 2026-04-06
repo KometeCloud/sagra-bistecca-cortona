@@ -55,7 +55,7 @@
     "title": "The Menu",
     "subtitle": "Simplicity and Tuscan tradition",
     "steakTitle": "Steak Menu",
-    "steakPrice": "€35",
+    "steakPrice": "€39",
     "steakDescription": "The star of the evening",
     "steakItems": [
       "Chianina Steak 750/800g",
@@ -64,7 +64,7 @@
       "Bread and cover charge"
     ],
     "childrenTitle": "Children's Menu",
-    "childrenPrice": "€15",
+    "childrenPrice": "€18",
     "childrenDescription": "For our youngest guests",
     "childrenItems": [
       "Chianina Burger 140g",

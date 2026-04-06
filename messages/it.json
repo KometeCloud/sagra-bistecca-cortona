@@ -55,7 +55,7 @@
     "title": "Il Menu",
     "subtitle": "Semplicità e tradizione toscana",
     "steakTitle": "Menu Bistecca",
-    "steakPrice": "€35",
+    "steakPrice": "€39",
     "steakDescription": "Il protagonista indiscusso della serata",
     "steakItems": [
       "Bistecca Chianina 750/800g",
@@ -64,7 +64,7 @@
       "Pane e coperto"
     ],
     "childrenTitle": "Menu Bambini",
-    "childrenPrice": "€15",
+    "childrenPrice": "€18",
     "childrenDescription": "Per i piccoli ospiti",
     "childrenItems": [
       "Hamburger di Chianina 140g",

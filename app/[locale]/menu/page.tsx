@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 
 export default function MenuPage() {
   const t = useTranslations('menu');
@@ -30,11 +31,20 @@ export default function MenuPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Steak Menu */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[var(--color-crema-dark)] hover:shadow-xl transition-shadow">
-              <div className="bg-gradient-to-br from-[var(--color-chianti)] to-[var(--color-terra)] p-8 text-white text-center">
-                <div className="text-7xl mb-3">🥩</div>
-                <h2 className="font-display text-3xl font-bold">{t('steakTitle')}</h2>
-                <p className="text-[var(--color-crema)] opacity-70 mt-1 text-sm">{t('steakDescription')}</p>
-                <div className="text-5xl font-bold text-[var(--color-fuoco-light)] mt-4">{t('steakPrice')}</div>
+              <div className="relative h-72 overflow-hidden">
+                <Image
+                  src="/immagini/foto/foto_1200x800/webp/bistecca_1.webp"
+                  alt="Bistecca Chianina"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white text-center">
+                  <h2 className="font-display text-3xl font-bold">{t('steakTitle')}</h2>
+                  <p className="text-[var(--color-crema)] opacity-80 mt-1 text-sm">{t('steakDescription')}</p>
+                  <div className="text-5xl font-bold text-[var(--color-fuoco-light)] mt-2">{t('steakPrice')}</div>
+                </div>
               </div>
               <div className="p-8">
                 <ul className="space-y-3">
@@ -50,11 +60,20 @@ export default function MenuPage() {
 
             {/* Children Menu */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[var(--color-crema-dark)] hover:shadow-xl transition-shadow">
-              <div className="bg-gradient-to-br from-[var(--color-salvia)] to-[var(--color-salvia-dark)] p-8 text-white text-center">
-                <div className="text-7xl mb-3">🍔</div>
-                <h2 className="font-display text-3xl font-bold">{t('childrenTitle')}</h2>
-                <p className="text-[var(--color-crema)] opacity-70 mt-1 text-sm">{t('childrenDescription')}</p>
-                <div className="text-5xl font-bold text-[var(--color-crema)] mt-4">{t('childrenPrice')}</div>
+              <div className="relative h-72 overflow-hidden">
+                <Image
+                  src="/immagini/foto/foto_1200x800/webp/burgher_1.webp"
+                  alt="Hamburger Chianina"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white text-center">
+                  <h2 className="font-display text-3xl font-bold">{t('childrenTitle')}</h2>
+                  <p className="text-[var(--color-crema)] opacity-80 mt-1 text-sm">{t('childrenDescription')}</p>
+                  <div className="text-5xl font-bold text-[var(--color-crema)] mt-2">{t('childrenPrice')}</div>
+                </div>
               </div>
               <div className="p-8">
                 <ul className="space-y-3">

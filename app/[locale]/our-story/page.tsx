@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function OurStoryPage() {
   const t = useTranslations('ourStory');
@@ -41,6 +42,30 @@ export default function OurStoryPage() {
         </div>
       </section>
 
+      {/* Foto grid 1 — dopo le stats */}
+      <section className="py-12 bg-[#FAF5EC]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { src: '/immagini/foto/vecchie_foto/webp/IMG_7569.webp', alt: 'Sagra della Bistecca' },
+              { src: '/immagini/foto/vecchie_foto/webp/IMG_7570.webp', alt: 'Sagra della Bistecca' },
+              { src: '/immagini/foto/vecchie_foto/webp/IMG_7571.webp', alt: 'Sagra della Bistecca' },
+              { src: '/immagini/foto/vecchie_foto/webp/IMG_7572.webp', alt: 'Sagra della Bistecca' },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[3/2] rounded-xl overflow-hidden">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Story content */}
       <section className="py-24 bg-[#FAF5EC]">
         <div className="max-w-3xl mx-auto px-4">
@@ -55,6 +80,30 @@ export default function OurStoryPage() {
                 <p className="text-[var(--color-terra)] text-lg leading-relaxed opacity-80">
                   {paragraph}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Foto grid 2 — dopo i paragrafi */}
+      <section className="pb-12 bg-[#FAF5EC]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { src: '/immagini/foto/vecchie_foto/webp/IMG_7573.webp', alt: 'Sagra della Bistecca' },
+              { src: '/immagini/foto/vecchie_foto/webp/IMG_7574.webp', alt: 'Sagra della Bistecca' },
+              { src: '/immagini/foto/vecchie_foto/webp/IMG_7575.webp', alt: 'Sagra della Bistecca' },
+              { src: '/immagini/foto/vecchie_foto/webp/IMG_7576.webp', alt: 'Sagra della Bistecca' },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[3/2] rounded-xl overflow-hidden">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
               </div>
             ))}
           </div>
