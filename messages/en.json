@@ -141,7 +141,10 @@
       "guests": "Number of guests",
       "tickets": "Tickets already purchased online",
       "message": "Additional notes",
-      "submit": "Send Request"
+      "submit": "Send Request",
+      "sending": "Sending...",
+      "success": "Request sent! We'll get back to you as soon as possible.",
+      "error": "Error sending. Please try again or contact us directly."
     }
   },
   "footer": {

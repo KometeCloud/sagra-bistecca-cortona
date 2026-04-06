@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import GroupBookingForm from '@/components/GroupBookingForm';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -95,91 +96,20 @@ export default function ContactsPage() {
             <p className="text-[var(--color-terra)] opacity-70">{t('groupsSubtitle')}</p>
           </div>
 
-          <form
-            action={`mailto:${t('emailAddress')}`}
-            method="GET"
-            className="bg-white rounded-3xl p-8 shadow-sm border border-[var(--color-crema-dark)] space-y-5"
-          >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
-                  {form('name')}
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
-                  {form('email')}
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
-                  {form('phone')}
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
-                  {form('guests')}
-                </label>
-                <input
-                  type="number"
-                  name="guests"
-                  min="10"
-                  required
-                  className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
-                {form('tickets')}
-              </label>
-              <input
-                type="number"
-                name="ticketsPurchased"
-                min="0"
-                className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
-                {form('message')}
-              </label>
-              <textarea
-                name="message"
-                rows={4}
-                className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors resize-none"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-[var(--color-chianti)] hover:bg-[var(--color-chianti-light)] text-white font-bold py-4 rounded-xl transition-colors text-lg"
-            >
-              {form('submit')}
-            </button>
-          </form>
+          <GroupBookingForm
+            labels={{
+              name: form('name'),
+              email: form('email'),
+              phone: form('phone'),
+              guests: form('guests'),
+              tickets: form('tickets'),
+              message: form('message'),
+              submit: form('submit'),
+              sending: form('sending'),
+              success: form('success'),
+              error: form('error'),
+            }}
+          />
         </div>
       </section>
     </>

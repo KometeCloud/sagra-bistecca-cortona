@@ -141,7 +141,10 @@
       "guests": "Numero di ospiti",
       "tickets": "Biglietti già acquistati online",
       "message": "Note aggiuntive",
-      "submit": "Invia Richiesta"
+      "submit": "Invia Richiesta",
+      "sending": "Invio in corso...",
+      "success": "Richiesta inviata! Ti risponderemo al più presto.",
+      "error": "Errore nell'invio. Riprova o scrivici direttamente."
     }
   },
   "footer": {
