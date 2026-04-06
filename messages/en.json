@@ -144,7 +144,10 @@
       "submit": "Send Request",
       "sending": "Sending...",
       "success": "Request sent! We'll get back to you as soon as possible.",
-      "error": "Error sending. Please try again or contact us directly."
+      "error": "Error sending. Please try again or contact us directly.",
+      "yes": "Yes",
+      "no": "No",
+      "guestsPlaceholder": "Select"
     }
   },
   "footer": {

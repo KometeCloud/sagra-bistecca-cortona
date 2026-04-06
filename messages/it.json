@@ -144,7 +144,10 @@
       "submit": "Invia Richiesta",
       "sending": "Invio in corso...",
       "success": "Richiesta inviata! Ti risponderemo al più presto.",
-      "error": "Errore nell'invio. Riprova o scrivici direttamente."
+      "error": "Errore nell'invio. Riprova o scrivici direttamente.",
+      "yes": "Sì",
+      "no": "No",
+      "guestsPlaceholder": "Seleziona"
     }
   },
   "footer": {

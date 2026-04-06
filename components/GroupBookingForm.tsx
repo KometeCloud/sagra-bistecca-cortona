@@ -8,7 +8,10 @@ interface Props {
     email: string;
     phone: string;
     guests: string;
+    guestsPlaceholder: string;
     tickets: string;
+    yes: string;
+    no: string;
     message: string;
     submit: string;
     sending: string;
@@ -17,8 +20,13 @@ interface Props {
   };
 }
 
+const GUEST_OPTIONS = ['10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25+'];
+
+const inputClass = 'w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors';
+
 export default function GroupBookingForm({ labels }: Props) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [ticketsBought, setTicketsBought] = useState<'yes' | 'no' | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -63,23 +71,13 @@ export default function GroupBookingForm({ labels }: Props) {
           <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
             {labels.name}
           </label>
-          <input
-            type="text"
-            name="name"
-            required
-            className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-          />
+          <input type="text" name="name" required className={inputClass} />
         </div>
         <div>
           <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
             {labels.email}
           </label>
-          <input
-            type="email"
-            name="email"
-            required
-            className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-          />
+          <input type="email" name="email" required className={inputClass} />
         </div>
       </div>
 
@@ -88,36 +86,43 @@ export default function GroupBookingForm({ labels }: Props) {
           <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
             {labels.phone}
           </label>
-          <input
-            type="tel"
-            name="phone"
-            className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-          />
+          <input type="tel" name="phone" className={inputClass} />
         </div>
         <div>
           <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
             {labels.guests}
           </label>
-          <input
-            type="number"
-            name="guests"
-            min="10"
-            required
-            className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-          />
+          <select name="guests" required className={inputClass}>
+            <option value="">{labels.guestsPlaceholder}</option>
+            {GUEST_OPTIONS.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
         </div>
       </div>
 
+      {/* Biglietti già acquistati — SI/NO */}
       <div>
-        <label className="block text-sm font-medium text-[var(--color-terra)] mb-1.5">
+        <p className="block text-sm font-medium text-[var(--color-terra)] mb-2">
           {labels.tickets}
-        </label>
-        <input
-          type="number"
-          name="ticketsPurchased"
-          min="0"
-          className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors"
-        />
+        </p>
+        <input type="hidden" name="ticketsPurchased" value={ticketsBought ?? ''} />
+        <div className="flex gap-3">
+          {(['yes', 'no'] as const).map((val) => (
+            <button
+              key={val}
+              type="button"
+              onClick={() => setTicketsBought(val)}
+              className={`flex-1 py-3 rounded-xl font-semibold border transition-colors text-sm ${
+                ticketsBought === val
+                  ? 'bg-[var(--color-chianti)] text-white border-[var(--color-chianti)]'
+                  : 'bg-[#FDFAF5] text-[var(--color-terra)] border-[var(--color-crema-dark)] hover:border-[var(--color-chianti)]'
+              }`}
+            >
+              {labels[val]}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div>
@@ -127,7 +132,7 @@ export default function GroupBookingForm({ labels }: Props) {
         <textarea
           name="message"
           rows={4}
-          className="w-full border border-[var(--color-crema-dark)] rounded-xl px-4 py-3 text-[var(--color-terra)] bg-[#FDFAF5] focus:outline-none focus:border-[var(--color-chianti)] transition-colors resize-none"
+          className={`${inputClass} resize-none`}
         />
       </div>
 
