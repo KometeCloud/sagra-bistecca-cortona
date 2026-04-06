@@ -110,6 +110,22 @@ export default function OurStoryPage() {
         </div>
       </section>
 
+      {/* Video storico */}
+      <section className="py-12 bg-[var(--color-crema)]">
+        <div className="max-w-3xl mx-auto px-4">
+          <video
+            autoPlay
+            loop
+            controls
+            playsInline
+            className="w-full rounded-2xl shadow-lg"
+          >
+            <source src="/video/old_video.webm" type="video/webm" />
+            <source src="/video/old_video.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
       {/* Timeline */}
       <section className="py-20 bg-[var(--color-crema)]">
         <div className="max-w-3xl mx-auto px-4 text-center">

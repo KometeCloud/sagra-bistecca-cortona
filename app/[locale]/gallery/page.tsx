@@ -47,6 +47,18 @@ export default function GalleryPage() {
 
           <GalleryGrid />
 
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+            className="w-full rounded-2xl shadow-lg mt-3"
+          >
+            <source src="/video/cortona_video.webm" type="video/webm" />
+            <source src="/video/cortona_video.mp4" type="video/mp4" />
+          </video>
+
           <p className="text-[var(--color-terra)] opacity-50 text-sm mt-8">
             Segui{' '}
             <a
