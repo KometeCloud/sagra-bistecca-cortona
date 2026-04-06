@@ -12,7 +12,6 @@ const PHOTOS = [
   { src: '/immagini/foto/foto_1200x800/webp/carne_ingriglia_6.webp', alt: 'Bistecca sulla griglia 6' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_ingriglia_7.webp', alt: 'Bistecca sulla griglia 7' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_ingriglia_8.webp', alt: 'Bistecca sulla griglia 8' },
-  { src: '/immagini/foto/foto_1200x800/webp/carne_ingriglia_9.webp', alt: 'Bistecca sulla griglia 9' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_ingriglia_10.webp', alt: 'Bistecca sulla griglia 10' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_cruda_1.webp', alt: 'Bistecca Chianina' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_cruda_2.webp', alt: 'Carne Chianina 2' },
