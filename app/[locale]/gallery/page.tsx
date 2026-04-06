@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import GalleryGrid from '@/components/GalleryGrid';
 
 export default function GalleryPage() {
   const t = useTranslations('gallery');
@@ -44,17 +45,7 @@ export default function GalleryPage() {
             {t('instagramHandle')}
           </a>
 
-          {/* Placeholder grid — in produzione: Instagram feed widget */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {Array.from({ length: 9 }).map((_, i) => (
-              <div
-                key={i}
-                className="aspect-square bg-gradient-to-br from-[var(--color-crema-dark)] to-[var(--color-crema)] rounded-xl flex items-center justify-center text-4xl opacity-50"
-              >
-                {['🥩', '🔥', '🍖', '👨‍🍳', '🫕', '🎉', '🐂', '🌿', '✨'][i]}
-              </div>
-            ))}
-          </div>
+          <GalleryGrid />
 
           <p className="text-[var(--color-terra)] opacity-50 text-sm mt-8">
             Segui{' '}

@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 import HeroVideo from '@/components/HeroVideo';
 
 export default function HomePage() {
@@ -25,7 +26,7 @@ export default function HomePage() {
             {/* Text */}
             <div>
               <span className="text-[var(--color-fuoco)] text-sm font-semibold uppercase tracking-widest">
-                ✦ La protagonista
+                {t('protagonistaBadge')}
               </span>
               <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-chianti)] mt-3 mb-6 leading-tight">
                 {t('aboutTitle')}
@@ -37,15 +38,20 @@ export default function HomePage() {
 
             {/* Visual card */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-[var(--color-chianti)] to-[var(--color-terra)] rounded-2xl p-10 text-center text-white shadow-2xl">
-                <div className="text-8xl mb-4">🥩</div>
-                <div className="font-display text-6xl font-bold text-[var(--color-fuoco-light)]">750g</div>
-                <div className="text-[var(--color-crema)] mt-2 text-lg">Bistecca Chianina</div>
-                <div className="mt-6 pt-6 border-t border-white/20 text-sm text-[var(--color-crema-dark)] opacity-80">
-                  Cotta al sangue · Solo sale grosso
+              <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/2] relative">
+                <Image
+                  src="/immagini/foto/foto_1200x800/webp/carne_cruda_4.webp"
+                  alt="Bistecca Chianina"
+                  fill
+                  className="object-cover scale-[1.2]"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/20 to-transparent pt-24 pb-6 px-6 text-white">
+                  <div className="font-display text-2xl font-bold text-[var(--color-fuoco-light)]">750g</div>
+                  <div className="text-[var(--color-crema)] text-sm mt-1">{t('steakCardDesc')}</div>
                 </div>
               </div>
-              {/* Decorative element */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-[var(--color-fuoco)] rounded-full opacity-10" />
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-[var(--color-chianti)] rounded-full opacity-15" />
             </div>
@@ -63,7 +69,7 @@ export default function HomePage() {
         />
         <div className="relative max-w-6xl mx-auto px-4 text-center">
           <span className="text-[var(--color-fuoco)] text-sm font-semibold uppercase tracking-widest">
-            ✦ Il simbolo della sagra
+            {t('grillBadge')}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-6">
             {t('grillTitle')}
@@ -75,15 +81,33 @@ export default function HomePage() {
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
             {[
-              { value: '14m+', label: 'La griglia più grande d\'Italia' },
-              { value: '65°', label: 'Edizione 2026' },
-              { value: '1960', label: 'Anno di fondazione' },
+              { value: '14m+', label: t('grillStatLabel') },
+              { value: '65°', label: t('editionLabel') },
+              { value: '1960', label: t('foundedLabel') },
             ].map((stat) => (
               <div key={stat.label} className="border border-white/10 rounded-xl p-6 bg-white/5">
                 <div className="font-display text-4xl font-bold text-[var(--color-fuoco-light)]">
                   {stat.value}
                 </div>
                 <div className="text-[var(--color-crema)] opacity-70 text-sm mt-2">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Foto griglia */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mt-10">
+            {[
+              { src: '/immagini/foto/foto_1200x800/webp/griglia_1.webp', alt: 'La griglia della sagra' },
+              { src: '/immagini/foto/foto_1200x800/webp/grilia_2.webp', alt: 'La griglia più grande d\'Italia' },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[3/2] rounded-2xl overflow-hidden">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
               </div>
             ))}
           </div>
@@ -94,24 +118,24 @@ export default function HomePage() {
       <section className="py-24 bg-[var(--color-crema)]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="text-[var(--color-fuoco)] text-sm font-semibold uppercase tracking-widest">
-            ✦ Il menu
+            {t('menuBadge')}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-chianti)] mt-3 mb-12">
-            Semplice come la tradizione
+            {t('menuSectionTitle')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
               {
                 icon: '🥩',
-                name: 'Menu Bistecca',
+                name: t('steakMenuName'),
                 price: '€35',
-                items: ['Bistecca Chianina 750/800g', 'Contorno a scelta', '1L acqua + pane'],
+                items: [t('steakMenuItem1'), t('steakMenuItem2'), t('steakMenuItem3')],
               },
               {
                 icon: '🍔',
-                name: 'Menu Bambini',
+                name: t('childrenMenuName'),
                 price: '€15',
-                items: ['Hamburger Chianina 140g', 'Patatine fritte', 'Bibita o acqua'],
+                items: [t('childrenMenuItem1'), t('childrenMenuItem2'), t('childrenMenuItem3')],
               },
             ].map((m) => (
               <div key={m.name} className="bg-white rounded-2xl p-8 shadow-sm border border-[var(--color-crema-dark)] hover:shadow-md transition-shadow">
@@ -133,13 +157,13 @@ export default function HomePage() {
               href="/menu"
               className="border-2 border-[var(--color-chianti)] text-[var(--color-chianti)] font-semibold px-6 py-3 rounded-full hover:bg-[var(--color-chianti)] hover:text-white transition-all"
             >
-              Vedi il menu completo
+              {t('viewFullMenu')}
             </Link>
             <Link
               href="/tickets"
               className="bg-[var(--color-chianti)] text-white font-semibold px-6 py-3 rounded-full hover:bg-[var(--color-chianti-light)] transition-colors"
             >
-              🎟 Acquista biglietti
+              {t('buyTicketsBtn')}
             </Link>
           </div>
         </div>
@@ -151,7 +175,7 @@ export default function HomePage() {
           {/* Location */}
           <div className="flex flex-col">
             <span className="text-[var(--color-fuoco)] text-sm font-semibold uppercase tracking-widest">
-              ✦ Dove siamo
+              {t('locationBadge')}
             </span>
             <h2 className="font-display text-3xl font-bold text-[var(--color-chianti)] mt-3 mb-4">
               {t('locationTitle')}
@@ -171,7 +195,7 @@ export default function HomePage() {
           {/* History teaser */}
           <div className="bg-gradient-to-br from-[var(--color-chianti)] to-[var(--color-terra)] rounded-2xl p-8 text-white">
             <span className="text-[var(--color-fuoco-light)] text-sm font-semibold uppercase tracking-widest">
-              ✦ La nostra storia
+              {t('ourStoryBadge')}
             </span>
             <h2 className="font-display text-3xl font-bold mt-3 mb-4">
               {t('historyTitle')}
@@ -197,16 +221,16 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto px-4">
           <div className="text-5xl mb-4">🔥</div>
           <h2 className="font-display text-4xl font-bold mb-4">
-            Ti aspettiamo a Cortona
+            {t('ctaTitle')}
           </h2>
           <p className="text-[var(--color-crema)] opacity-80 text-lg mb-8">
-            Prenota il tuo posto alla sagra più amata della Toscana
+            {t('ctaDesc')}
           </p>
           <Link
             href="/tickets"
             className="bg-[var(--color-fuoco)] hover:bg-[var(--color-fuoco-light)] text-white font-bold text-lg px-10 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-[0_0_40px_rgba(232,98,26,0.5)] inline-block"
           >
-            🎟 Acquista i biglietti
+            {t('ctaBuyTickets')}
           </Link>
         </div>
       </section>

@@ -100,7 +100,7 @@ export default function HeroVideo({
           </span>
         </h1>
 
-        <p className="text-[var(--color-crema)] text-xl md:text-2xl mt-4 mb-2 font-display italic">
+        <p className="text-[var(--color-crema)] text-2xl md:text-3xl mt-4 mb-2 font-display italic">
           {subtitle}
         </p>
 
