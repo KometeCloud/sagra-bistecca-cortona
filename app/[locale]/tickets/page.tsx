@@ -124,7 +124,7 @@ export default function TicketsPage() {
       {/* At the gate */}
       <section className="py-16 bg-[var(--color-crema)]">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <div className="text-4xl mb-4">🚪</div>
+          <div className="text-4xl mb-4">🎟️</div>
           <h3 className="font-display text-2xl font-bold text-[var(--color-terra)] mb-3">
             {t('gateTitle')}
           </h3>
