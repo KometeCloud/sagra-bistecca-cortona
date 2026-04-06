@@ -193,45 +193,73 @@ export default function HomePage() {
       <section className="py-24 bg-[#FAF5EC]">
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Location */}
-          <div className="flex flex-col">
-            <span className="text-[var(--color-fuoco)] text-sm font-semibold uppercase tracking-widest">
-              {t('locationBadge')}
-            </span>
-            <h2 className="font-display text-3xl font-bold text-[var(--color-chianti)] mt-3 mb-4">
-              {t('locationTitle')}
-            </h2>
-            <p className="text-[var(--color-terra)] leading-relaxed opacity-80 mb-4">
-              {t('locationText')}
-            </p>
-            <div className="mt-auto flex items-center gap-2 text-[var(--color-salvia)] font-medium">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              Giardini del Parterre, Cortona (AR)
+          <div className="relative rounded-2xl overflow-hidden text-white">
+            <Image
+              src="/immagini/foto/foto_1200x800/webp/persone_2.webp"
+              alt="Ospiti alla sagra"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/10" />
+            <div className="relative p-8">
+              <span className="text-[var(--color-fuoco-light)] text-sm font-semibold uppercase tracking-widest">
+                {t('locationBadge')}
+              </span>
+              <h2 className="font-display text-3xl font-bold mt-3 mb-4">
+                {t('locationTitle')}
+              </h2>
+              <p className="text-[var(--color-crema)] opacity-80 leading-relaxed mb-6">
+                {t('locationText')}
+              </p>
+              <a
+                href="https://maps.google.com/?q=Giardini+del+Parterre+Cortona"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[var(--color-fuoco-light)] hover:text-white font-semibold transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Giardini del Parterre, Cortona (AR)
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
           </div>
 
           {/* History teaser */}
-          <div className="bg-gradient-to-br from-[var(--color-chianti)] to-[var(--color-terra)] rounded-2xl p-8 text-white">
-            <span className="text-[var(--color-fuoco-light)] text-sm font-semibold uppercase tracking-widest">
-              {t('ourStoryBadge')}
-            </span>
-            <h2 className="font-display text-3xl font-bold mt-3 mb-4">
-              {t('historyTitle')}
-            </h2>
-            <p className="text-[var(--color-crema)] opacity-80 leading-relaxed mb-6">
-              {t('historyText')}
-            </p>
-            <Link
-              href="/our-story"
-              className="inline-flex items-center gap-2 text-[var(--color-fuoco-light)] hover:text-white font-semibold transition-colors"
-            >
-              {t('historyLink')}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+          <div className="relative rounded-2xl overflow-hidden text-white">
+            <Image
+              src="/immagini/foto/vecchie_foto/webp/old-grill.webp"
+              alt="La griglia storica della sagra"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/10" />
+            <div className="relative p-8">
+              <span className="text-[var(--color-fuoco-light)] text-sm font-semibold uppercase tracking-widest">
+                {t('ourStoryBadge')}
+              </span>
+              <h2 className="font-display text-3xl font-bold mt-3 mb-4">
+                {t('historyTitle')}
+              </h2>
+              <p className="text-[var(--color-crema)] opacity-80 leading-relaxed mb-6">
+                {t('historyText')}
+              </p>
+              <Link
+                href="/our-story"
+                className="inline-flex items-center gap-2 text-[var(--color-fuoco-light)] hover:text-white font-semibold transition-colors"
+              >
+                {t('historyLink')}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
