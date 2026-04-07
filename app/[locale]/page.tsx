@@ -49,7 +49,7 @@ export default function HomePage() {
                   priority
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/20 to-transparent pt-24 pb-6 px-6 text-white">
-                  <div className="font-display text-2xl font-bold text-[var(--color-fuoco-light)]">750g</div>
+                  <div className="font-display text-2xl font-bold text-[var(--color-fuoco-light)]">750/800g</div>
                   <div className="text-[var(--color-crema)] text-sm mt-1">{t('steakCardDesc')}</div>
                 </div>
               </div>
