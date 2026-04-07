@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
-          <div>
+          <div className="flex flex-col items-center text-center">
             <h3 className="font-display text-2xl font-bold text-white mb-2">
               Sagra della Bistecca
             </h3>
