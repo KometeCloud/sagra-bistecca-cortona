@@ -127,7 +127,6 @@ export default function OurStoryPage() {
       <section className="py-12 bg-[var(--color-crema)]">
         <div className="max-w-3xl mx-auto px-4">
           <video
-            autoPlay
             loop
             controls
             playsInline
