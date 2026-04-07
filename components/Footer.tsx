@@ -19,13 +19,6 @@ export default function Footer() {
             </h3>
             <p className="text-sm text-[var(--color-crema-dark)] mb-1">65ª Edizione · Cortona</p>
             <p className="text-sm opacity-70 mt-3">{t('tagline')}</p>
-            <p className="text-sm opacity-60 mt-1 flex items-start gap-1">
-              <svg className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-fuoco)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              {t('location')}
-            </p>
           </div>
 
           {/* Links */}
@@ -90,6 +83,16 @@ export default function Footer() {
               <p>+39 0575 1596831</p>
               <p>info@sagradellabistecca.com</p>
             </div>
+            <h4 className="text-sm font-semibold uppercase tracking-widest text-[var(--color-fuoco)] mt-6 mb-3">
+              {t('locationTitle')}
+            </h4>
+            <p className="text-sm opacity-60 flex items-start gap-1">
+              <svg className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-fuoco)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              {t('location')}
+            </p>
           </div>
         </div>
 
