@@ -7,7 +7,8 @@
     "ourStory": "La Nostra Storia",
     "contacts": "Contatti",
     "buyTickets": "Acquista Biglietti",
-    "whereToStay": "Dove Dormire"
+    "whereToStay": "Dove Dormire",
+    "faq": "FAQ"
   },
   "home": {
     "edition": "65°",
@@ -175,6 +176,54 @@
     "followUs": "Seguici",
     "locationTitle": "Location",
     "rights": "Tutti i diritti riservati"
+  },
+  "faq": {
+    "title": "Domande Frequenti",
+    "subtitle": "Tutto quello che devi sapere",
+    "badge": "✦ FAQ",
+    "ctaText": "Hai altre domande?",
+    "items": [
+      {
+        "q": "È necessario prenotare?",
+        "a": "Per coppie o piccoli gruppi (meno di 10 persone) non è necessaria alcuna prenotazione. Ci sono moltissimi tavoli disponibili ogni sera. La prenotazione è obbligatoria solo per gruppi di 10 o più persone — in quel caso contattaci tramite la pagina Contatti."
+      },
+      {
+        "q": "Posso acquistare i biglietti la sera dell'evento?",
+        "a": "Sì, i biglietti sono disponibili direttamente in fila alla cassa la sera dell'evento, salvo disponibilità. Per evitare attese, consigliamo l'acquisto online in anticipo."
+      },
+      {
+        "q": "Il biglietto online è valido per tutti i giorni della sagra?",
+        "a": "Il biglietto acquistato online dà diritto a ricevere quanto incluso una sola volta nell'arco dell'intera manifestazione, nel giorno che preferisci tra l'11 e il 15 agosto 2026."
+      },
+      {
+        "q": "Cosa include il menu bistecca?",
+        "a": "Il menu bistecca (€39) include: bistecca di Chianina 750/800g cotta al sangue, contorno a scelta (fagioli al fiasco o pomodori), 1 litro d'acqua e pane."
+      },
+      {
+        "q": "C'è un menu per i bambini?",
+        "a": "Sì! Il menu bambini (€18) include: hamburger di Chianina 140g, patatine fritte, bibita analcolica o acqua e coperto."
+      },
+      {
+        "q": "La bistecca è sempre cotta al sangue?",
+        "a": "Sì. La bistecca di Chianina viene cotta al sangue secondo l'antica tradizione toscana, condita solo con sale grosso. È il rispetto per la materia prima che rende questa carne unica."
+      },
+      {
+        "q": "Dove si svolge la sagra?",
+        "a": "La Sagra della Bistecca si svolge ai Giardini del Parterre, nel cuore di Cortona (AR), con la splendida Valle di Cortona a fare da sfondo."
+      },
+      {
+        "q": "Come si raggiunge Cortona?",
+        "a": "In auto: Autostrada A1, uscita Valdichiana, poi seguire le indicazioni per Cortona. In treno: stazione di Camucia-Cortona (linea Roma–Firenze), poi taxi o bus navetta. In aereo: aeroporti di Firenze (1h) o Roma Fiumicino (2h)."
+      },
+      {
+        "q": "C'è parcheggio?",
+        "a": "Sì, sono disponibili parcheggi nelle vicinanze dei Giardini del Parterre. In alta stagione consigliamo di arrivare con un po' di anticipo."
+      },
+      {
+        "q": "Posso venire con il cane?",
+        "a": "Gli animali domestici non sono ammessi all'interno dell'area della sagra per motivi igienico-sanitari."
+      }
+    ]
   },
   "stay": {
     "title": "Dove Dormire",

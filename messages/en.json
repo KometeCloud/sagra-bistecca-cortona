@@ -7,7 +7,8 @@
     "ourStory": "Our Story",
     "contacts": "Contacts",
     "buyTickets": "Buy Tickets",
-    "whereToStay": "Where to Stay"
+    "whereToStay": "Where to Stay",
+    "faq": "FAQ"
   },
   "home": {
     "edition": "65th",
@@ -175,6 +176,54 @@
     "followUs": "Follow Us",
     "locationTitle": "Location",
     "rights": "All rights reserved"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know",
+    "badge": "✦ FAQ",
+    "ctaText": "Still have questions?",
+    "items": [
+      {
+        "q": "Do I need to book a table?",
+        "a": "For couples or small groups (fewer than 10 people), no reservation is needed. There are plenty of tables available every evening. Reservations are required only for groups of 10 or more — in that case, contact us via the Contacts page."
+      },
+      {
+        "q": "Can I buy tickets on the evening of the event?",
+        "a": "Yes, tickets are available directly at the ticket desk on the evening of the event, subject to availability. To avoid queuing, we recommend purchasing online in advance."
+      },
+      {
+        "q": "Is an online ticket valid for all days of the festival?",
+        "a": "An online ticket entitles you to receive the included items once during the entire event, on whichever day you choose between 11 and 15 August 2026."
+      },
+      {
+        "q": "What does the steak menu include?",
+        "a": "The steak menu (€39) includes: Chianina steak 750/800g cooked rare, a choice of side dish (cannellini beans or tomatoes), 1 liter of water, and bread."
+      },
+      {
+        "q": "Is there a menu for children?",
+        "a": "Yes! The children's menu (€18) includes: Chianina burger 140g, french fries, a soft drink or water, and cover charge."
+      },
+      {
+        "q": "Is the steak always cooked rare?",
+        "a": "Yes. The Chianina steak is always cooked rare, following the ancient Tuscan tradition, seasoned only with coarse salt. Respecting the quality of the meat is what makes it truly unique."
+      },
+      {
+        "q": "Where does the festival take place?",
+        "a": "The Sagra della Bistecca takes place at the Giardini del Parterre, in the heart of Cortona (AR), with the stunning Valle di Cortona as a backdrop."
+      },
+      {
+        "q": "How do I get to Cortona?",
+        "a": "By car: Motorway A1, exit Valdichiana, then follow signs to Cortona. By train: Camucia-Cortona station (Rome–Florence line), then taxi or shuttle bus. By plane: Florence airport (1h) or Rome Fiumicino (2h)."
+      },
+      {
+        "q": "Is there parking available?",
+        "a": "Yes, parking is available near the Giardini del Parterre. During peak season we recommend arriving a little early."
+      },
+      {
+        "q": "Can I bring my dog?",
+        "a": "Pets are not allowed inside the festival area for health and safety reasons."
+      }
+    ]
   },
   "stay": {
     "title": "Where to Stay",

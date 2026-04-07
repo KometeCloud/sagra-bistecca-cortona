@@ -35,13 +35,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               {[
-                { href: '/', label: nav('home') },
                 { href: '/menu', label: nav('menu') },
                 { href: '/tickets', label: nav('tickets') },
                 { href: '/dove-dormire', label: nav('whereToStay') },
                 { href: '/gallery', label: nav('gallery') },
                 { href: '/our-story', label: nav('ourStory') },
                 { href: '/contacts', label: nav('contacts') },
+                { href: '/faq', label: nav('faq') },
               ].map((l) => (
                 <li key={l.href}>
                   <Link

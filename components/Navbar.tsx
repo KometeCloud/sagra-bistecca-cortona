@@ -21,6 +21,7 @@ export default function Navbar() {
     { href: '/our-story', label: t('ourStory') },
     { href: '/gallery', label: t('gallery') },
     { href: '/contacts', label: t('contacts') },
+    { href: '/faq', label: t('faq') },
   ];
 
   return (
