@@ -18,7 +18,7 @@ export default function Footer() {
             <h3 className="font-display text-2xl font-bold text-white mb-2">
               Sagra della Bistecca
             </h3>
-            <p className="text-sm text-[var(--color-crema-dark)] mb-3">65ª Edizione · Organizzata da:</p>
+            <p className="text-sm text-[var(--color-crema-dark)] mb-3">{t('edition')}</p>
             <Image
               src="/immagini/loghi/logo_asd.webp"
               alt="ASD Sagra della Bistecca"
