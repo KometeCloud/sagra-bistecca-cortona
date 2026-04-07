@@ -109,9 +109,14 @@ export default function TicketsPage() {
       {/* Tailor Tickets widget */}
       <section className="py-16 bg-[#FAF5EC]">
         <div className="max-w-3xl mx-auto px-4">
-          <h3 className="font-display text-2xl font-bold text-[var(--color-chianti)] text-center mb-8">
+          <h3 className="font-display text-2xl font-bold text-[var(--color-chianti)] text-center mb-6">
             {t('onlineTitle')}
           </h3>
+          <div className="bg-[var(--color-crema)] border border-[var(--color-crema-dark)] rounded-2xl px-6 py-5 mb-8 text-sm text-[var(--color-terra)] leading-relaxed space-y-3">
+            {t('onlineNote').split('\n').map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
+          </div>
           <div className="bg-white rounded-3xl shadow-sm border border-[var(--color-crema-dark)] p-6 overflow-hidden">
             <TicketWidget />
           </div>
