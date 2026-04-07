@@ -22,8 +22,8 @@ export default function Footer() {
             <Image
               src="/immagini/loghi/logo_asd.webp"
               alt="ASD Sagra della Bistecca"
-              width={80}
-              height={87}
+              width={110}
+              height={120}
               className="opacity-90"
             />
           </div>
