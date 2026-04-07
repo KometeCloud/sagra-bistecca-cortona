@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Links */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-widest text-[var(--color-fuoco)] mb-4">
-              Navigation
+              {t('navTitle')}
             </h4>
             <ul className="space-y-2 text-sm">
               {[
