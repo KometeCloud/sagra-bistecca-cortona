@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -17,8 +18,14 @@ export default function Footer() {
             <h3 className="font-display text-2xl font-bold text-white mb-2">
               Sagra della Bistecca
             </h3>
-            <p className="text-sm text-[var(--color-crema-dark)] mb-1">65ª Edizione · Cortona</p>
-            <p className="text-sm opacity-70 mt-3">{t('tagline')}</p>
+            <p className="text-sm text-[var(--color-crema-dark)] mb-3">65ª Edizione · Organizzata da:</p>
+            <Image
+              src="/immagini/loghi/logo_asd.webp"
+              alt="ASD Sagra della Bistecca"
+              width={80}
+              height={87}
+              className="opacity-90"
+            />
           </div>
 
           {/* Links */}
