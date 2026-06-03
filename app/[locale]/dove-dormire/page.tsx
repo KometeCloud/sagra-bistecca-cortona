@@ -43,17 +43,19 @@ export default async function DoveDormirePage() {
           <p className="text-[var(--color-terra)] text-lg leading-relaxed opacity-80">
             {t('intro')}
           </p>
-          <p className="mt-4 text-[var(--color-terra)] text-base opacity-70">
-            {t('extraPromo')}{' '}
+          <div className="mt-6 flex flex-col items-center gap-3">
+            <p className="text-[var(--color-terra)] text-xl font-semibold">
+              {t('extraPromo')}
+            </p>
             <a
               href="https://addextra.services?ref=LBJ9UEAF"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold underline underline-offset-2 hover:opacity-100 transition-opacity"
+              className="bg-[var(--color-fuoco)] hover:bg-[var(--color-fuoco-light)] text-white font-bold px-7 py-3 rounded-full transition-colors inline-block"
             >
               {t('extraPromoLink')}
             </a>
-          </p>
+          </div>
         </div>
       </section>
 
