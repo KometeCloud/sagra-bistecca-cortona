@@ -46,6 +46,8 @@ export default async function DoveDormirePage() {
           <div className="mt-6 flex flex-col items-center gap-3">
             <p className="text-[var(--color-terra)] text-xl font-semibold">
               {t('extraPromo')}
+              <br />
+              {t('extraPromo2')}
             </p>
             <a
               href="https://addextra.services?ref=LBJ9UEAF"
