@@ -41,7 +41,7 @@
     "steakMenuItem2": "Choice of side dish",
     "steakMenuItem3": "1L water + bread",
     "childrenMenuName": "Children's Menu",
-    "childrenMenuItem1": "Hamburger 140g",
+    "childrenMenuItem1": "Hamburger 150g",
     "childrenMenuItem2": "French fries",
     "childrenMenuItem3": "Soft drink or water",
     "viewFullMenu": "View full menu",
@@ -68,7 +68,7 @@
     "childrenPrice": "€18",
     "childrenDescription": "For our youngest guests",
     "childrenItems": [
-      "Hamburger 140g",
+      "Hamburger 150g",
       "French fries",
       "Soft drink or water",
       "Cover charge"

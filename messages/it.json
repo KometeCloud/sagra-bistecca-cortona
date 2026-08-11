@@ -41,7 +41,7 @@
     "steakMenuItem2": "Contorno a scelta",
     "steakMenuItem3": "1L acqua + pane",
     "childrenMenuName": "Menu Bambini",
-    "childrenMenuItem1": "Hamburger 140g",
+    "childrenMenuItem1": "Hamburger 150g",
     "childrenMenuItem2": "Patatine fritte",
     "childrenMenuItem3": "Bibita o acqua",
     "viewFullMenu": "Vedi il menu completo",
@@ -68,7 +68,7 @@
     "childrenPrice": "€18",
     "childrenDescription": "Per i piccoli ospiti",
     "childrenItems": [
-      "Hamburger 140g",
+      "Hamburger 150g",
       "Patatine fritte",
       "Bibita analcolica o acqua",
       "Coperto"
