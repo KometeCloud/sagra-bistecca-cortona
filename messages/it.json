@@ -79,7 +79,13 @@
     "groupsText": "Per gruppi di 10 o più persone è possibile prenotare un tavolo.\nContattaci per organizzare la tua serata.",
     "groupsNote": "Minimo 10 partecipanti",
     "gateInfo": "I biglietti sono acquistabili anche direttamente in fila alla cassa la sera dell'evento.",
-    "buyButton": "Acquista ora"
+    "buyButton": "Acquista ora",
+    "pastaSectionTitle": "IN ESCLUSIVA QUEST'ANNO POTETE ORDINARE ANCHE:",
+    "pastaFumoTitle": "Pasta al Fumo",
+    "pastaFumoPrice": "€10",
+    "pastaAglioneTitle": "Pasta all'Aglione",
+    "pastaAglioneNote": "Piatto vegetariano",
+    "pastaAglionePrice": "€10"
   },
   "tickets": {
     "title": "Biglietti",

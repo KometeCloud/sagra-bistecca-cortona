@@ -79,7 +79,13 @@
     "groupsText": "For groups of 10 or more people, table reservations are available. Contact us to plan your evening.",
     "groupsNote": "Minimum 10 participants",
     "gateInfo": "Tickets are also available by queuing at the ticket desk on the evening of the event.",
-    "buyButton": "Buy now"
+    "buyButton": "Buy now",
+    "pastaSectionTitle": "Also on the Menu",
+    "pastaFumoTitle": "Smoked Pasta",
+    "pastaFumoPrice": "€10",
+    "pastaAglioneTitle": "Aglione Pasta",
+    "pastaAglioneNote": "Vegetarian dish",
+    "pastaAglionePrice": "€10"
   },
   "tickets": {
     "title": "Tickets",

@@ -103,6 +103,45 @@ export default function TicketsPage() {
               </div>
             </div>
           </div>
+
+          {/* Pasta Dishes */}
+          <div className="mt-10">
+            <h2 className="font-display text-2xl font-bold text-[var(--color-chianti)] text-center mb-6">
+              {tMenu('pastaSectionTitle')}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div className="relative h-72 rounded-3xl overflow-hidden shadow-lg border border-[var(--color-crema-dark)] hover:shadow-xl transition-shadow">
+                <Image
+                  src="/pasta_fumo.jpg"
+                  alt={tMenu('pastaFumoTitle')}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white text-center">
+                  <h3 className="font-display text-3xl font-bold">{tMenu('pastaFumoTitle')}</h3>
+                  <p className="font-bold mt-1 text-sm invisible" aria-hidden="true">{tMenu('pastaAglioneNote')}</p>
+                  <div className="text-5xl font-bold text-green-300 mt-2">{tMenu('pastaFumoPrice')}</div>
+                </div>
+              </div>
+              <div className="relative h-72 rounded-3xl overflow-hidden shadow-lg border border-[var(--color-crema-dark)] hover:shadow-xl transition-shadow">
+                <Image
+                  src="/pasta_aglione.jpg"
+                  alt={tMenu('pastaAglioneTitle')}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white text-center">
+                  <h3 className="font-display text-3xl font-bold">{tMenu('pastaAglioneTitle')}</h3>
+                  <p className="text-yellow-400 font-bold mt-1 text-sm">{tMenu('pastaAglioneNote')}</p>
+                  <div className="text-5xl font-bold text-green-300 mt-2">{tMenu('pastaAglionePrice')}</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
