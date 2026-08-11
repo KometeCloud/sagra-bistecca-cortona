@@ -13,7 +13,7 @@ const PHOTOS = [
   { src: '/immagini/foto/foto_1200x800/webp/carne_ingriglia_7.webp', alt: 'Bistecca sulla griglia 7' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_ingriglia_8.webp', alt: 'Bistecca sulla griglia 8' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_ingriglia_10.webp', alt: 'Bistecca sulla griglia 10' },
-  { src: '/immagini/foto/foto_1200x800/webp/carne_cruda_1.webp', alt: 'Bistecca Chianina' },
+  { src: '/immagini/foto/foto_1200x800/webp/carne_cruda_1.webp', alt: 'Bistecca' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_cruda_2.webp', alt: 'Carne Chianina 2' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_cruda_3.webp', alt: 'Carne Chianina 3' },
   { src: '/immagini/foto/foto_1200x800/webp/carne_cruda_4.webp', alt: 'Carne Chianina 4' },
@@ -28,8 +28,8 @@ const PHOTOS = [
   { src: '/immagini/foto/foto_1200x800/webp/persone_4.webp', alt: 'Ospiti alla sagra 2' },
   { src: '/immagini/foto/foto_1200x800/webp/pesone_1.webp', alt: 'Persone alla sagra' },
   { src: '/immagini/foto/foto_1200x800/webp/bar_1.webp', alt: 'Il bar della sagra' },
-  { src: '/immagini/foto/foto_1200x800/webp/bistecca_1.webp', alt: 'Bistecca Chianina' },
-  { src: '/immagini/foto/foto_1200x800/webp/burgher_1.webp', alt: 'Hamburger Chianina' },
+  { src: '/immagini/foto/foto_1200x800/webp/bistecca_1.webp', alt: 'Bistecca' },
+  { src: '/immagini/foto/foto_1200x800/webp/burgher_1.webp', alt: 'Hamburger' },
   { src: '/immagini/foto/foto_1200x800/webp/dolci_1.webp', alt: 'Dolci della sagra' },
 ];
 

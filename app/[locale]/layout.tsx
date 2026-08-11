@@ -54,7 +54,7 @@ export default async function LocaleLayout({
     name: locale === 'it' ? '65° Sagra della Bistecca di Cortona' : '65th Sagra della Bistecca di Cortona',
     description: locale === 'it'
       ? 'La Sagra della Bistecca di Cortona: bistecca Chianina cotta al sangue, la griglia più grande d\'Italia.'
-      : 'The Sagra della Bistecca di Cortona: Chianina beef cooked rare, Italy\'s largest grill.',
+      : 'The Sagra della Bistecca di Cortona: Steak cooked rare, Italy\'s largest grill.',
     startDate: '2026-08-11',
     endDate: '2026-08-15',
     eventStatus: 'https://schema.org/EventScheduled',

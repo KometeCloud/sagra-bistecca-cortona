@@ -42,7 +42,7 @@ export default function HomePage() {
               <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/2] relative">
                 <Image
                   src="/immagini/foto/foto_1200x800/webp/carne_cruda_4.webp"
-                  alt="Bistecca Chianina"
+                  alt="Bistecca"
                   fill
                   className="object-cover scale-[1.2]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -128,7 +128,7 @@ export default function HomePage() {
             {[
               {
                 photo: '/immagini/foto/foto_1200x800/webp/bistecca_1.webp',
-                alt: 'Bistecca Chianina',
+                alt: 'Bistecca',
                 name: t('steakMenuName'),
                 desc: tMenu('steakDescription'),
                 price: tMenu('steakPrice'),
@@ -136,7 +136,7 @@ export default function HomePage() {
               },
               {
                 photo: '/immagini/foto/foto_1200x800/webp/burgher_1.webp',
-                alt: 'Hamburger Chianina',
+                alt: 'Hamburger',
                 name: t('childrenMenuName'),
                 desc: tMenu('childrenDescription'),
                 price: tMenu('childrenPrice'),

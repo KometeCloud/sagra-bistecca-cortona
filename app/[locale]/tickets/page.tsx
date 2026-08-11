@@ -50,7 +50,7 @@ export default function TicketsPage() {
               <div className="relative h-72 overflow-hidden">
                 <Image
                   src="/immagini/foto/foto_1200x800/webp/bistecca_1.webp"
-                  alt="Bistecca Chianina"
+                  alt="Bistecca"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -79,7 +79,7 @@ export default function TicketsPage() {
               <div className="relative h-72 overflow-hidden">
                 <Image
                   src="/immagini/foto/foto_1200x800/webp/burgher_1.webp"
-                  alt="Hamburger Chianina"
+                  alt="Hamburger"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"

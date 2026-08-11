@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const isIt = locale === 'it';
   return {
-    title: isIt ? 'Il Menu — Bistecca Chianina €39' : 'The Menu — Chianina Steak €39',
+    title: isIt ? 'Il Menu — Bistecca €39' : 'The Menu — Steak €39',
     description: isIt
       ? 'Menu bistecca Chianina 750/800g a €39, menu bambini a €18. Prenotazioni gruppi disponibili.'
       : 'Chianina steak menu 750/800g at €39, children\'s menu at €18. Group bookings available.',
@@ -47,7 +47,7 @@ export default function MenuPage() {
               <div className="relative h-72 overflow-hidden">
                 <Image
                   src="/immagini/foto/foto_1200x800/webp/bistecca_1.webp"
-                  alt="Bistecca Chianina"
+                  alt="Bistecca"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -76,7 +76,7 @@ export default function MenuPage() {
               <div className="relative h-72 overflow-hidden">
                 <Image
                   src="/immagini/foto/foto_1200x800/webp/burgher_1.webp"
-                  alt="Hamburger Chianina"
+                  alt="Hamburger"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
