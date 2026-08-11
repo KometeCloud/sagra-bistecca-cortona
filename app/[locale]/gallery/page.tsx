@@ -8,8 +8,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: isIt ? 'Galleria Foto e Video' : 'Photo & Video Gallery',
     description: isIt
-      ? 'Foto e video della Sagra della Bistecca di Cortona. Scopri le immagini della griglia, della bistecca Chianina e dell\'atmosfera della sagra.'
-      : 'Photos and videos from the Sagra della Bistecca di Cortona. Discover images of the grill, Chianina steak and the festival atmosphere.',
+      ? 'Foto e video della Sagra della Bistecca di Cortona. Scopri le immagini della griglia, della bistecca e dell\'atmosfera della sagra.'
+      : 'Photos and videos from the Sagra della Bistecca di Cortona. Discover images of the grill, the steak and the festival atmosphere.',
     alternates: { canonical: `https://sagradellabistecca.com/${locale}/gallery` },
   };
 }

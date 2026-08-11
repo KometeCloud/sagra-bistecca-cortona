@@ -8,8 +8,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: isIt ? 'La Nostra Storia — Dal 1960' : 'Our Story — Since 1960',
     description: isIt
-      ? 'La storia della Sagra della Bistecca di Cortona, nata negli anni \'60. Oltre 65 edizioni di tradizione toscana e bistecca Chianina.'
-      : 'The history of the Sagra della Bistecca di Cortona, founded in the 1960s. Over 65 editions of Tuscan tradition and Chianina steak.',
+      ? 'La storia della Sagra della Bistecca di Cortona, nata negli anni \'60. Oltre 65 edizioni di tradizione toscana e bistecca.'
+      : 'The history of the Sagra della Bistecca di Cortona, founded in the 1960s. Over 65 editions of Tuscan tradition and steak.',
     alternates: { canonical: `https://sagradellabistecca.com/${locale}/our-story` },
   };
 }

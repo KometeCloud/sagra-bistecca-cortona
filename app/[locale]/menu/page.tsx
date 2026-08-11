@@ -9,8 +9,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: isIt ? 'Il Menu — Bistecca €39' : 'The Menu — Steak €39',
     description: isIt
-      ? 'Menu bistecca Chianina 750/800g a €39, menu bambini a €18. Prenotazioni gruppi disponibili.'
-      : 'Chianina steak menu 750/800g at €39, children\'s menu at €18. Group bookings available.',
+      ? 'Menu bistecca 750/800g a €39, menu bambini a €18. Prenotazioni gruppi disponibili.'
+      : 'Steak menu 750/800g at €39, children\'s menu at €18. Group bookings available.',
     alternates: { canonical: `https://sagradellabistecca.com/${locale}/menu` },
   };
 }

@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     template: "%s | Sagra della Bistecca Cortona",
   },
   description:
-    "La Sagra della Bistecca di Cortona: bistecca Chianina cotta al sangue, la griglia più grande d'Italia. 11-15 Agosto 2026, Giardini del Parterre, Cortona.",
+    "La Sagra della Bistecca di Cortona: bistecca cotta al sangue, la griglia più grande d'Italia. 11-15 Agosto 2026, Giardini del Parterre, Cortona.",
   keywords: [
     "Sagra della Bistecca",
     "Cortona",
-    "bistecca Chianina",
+    "bistecca",
     "sagra Toscana",
     "Giardini del Parterre",
     "sagra 2026",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "65° Sagra della Bistecca - Cortona 2026",
     description:
-      "La sagra toscana più amata: bistecca Chianina e la griglia più grande d'Italia. 11-15 Agosto 2026.",
+      "La sagra toscana più amata: bistecca e la griglia più grande d'Italia. 11-15 Agosto 2026.",
     url: "https://sagradellabistecca.com",
     siteName: "Sagra della Bistecca Cortona",
     locale: "it_IT",
